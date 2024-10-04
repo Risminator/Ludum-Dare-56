@@ -16,7 +16,7 @@ func _ready():
 	pause.track_esc = false
 
 func start_game():
-	pass
+	SceneChanger.change_to(Global.GAME_SCENES.GAME)
 	#Global.set_scene(Global.SCENES.CUTSCENE)
 	
 func quit_game():

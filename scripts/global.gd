@@ -1,8 +1,16 @@
 extends Node
 
-const SCENES = {
-	MAIN = "menus/main_menu",
+enum GAME_SCENES {
+	MAIN_MENU,
+	GAME
 }
+
+const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
+const GAME_PATH = "res://scenes/levels/game.tscn"
+
+#const SCENES = {
+	#MAIN = "menus/main_menu",
+#}
 
 var SoundEffectsVolume = 0
 var MusicVolume = 0

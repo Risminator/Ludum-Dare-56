@@ -54,7 +54,7 @@ func _on_btn_restart_pressed():
 
 func _on_btn_main_pressed():
 	resume()
-	Global.set_scene(Global.SCENES.MAIN)
+	SceneChanger.change_to(Global.GAME_SCENES.MAIN_MENU)
 
 func _process(_delta):
 	if track_esc:

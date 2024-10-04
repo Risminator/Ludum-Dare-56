@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkndnoxyib1d6"]
+
+[ext_resource type="Texture2D" uid="uid://d03ltm0sqx61q" path="res://assets/temp/Yellow.png" id="1_cr2qm"]
+[ext_resource type="PackedScene" uid="uid://bd7b1sxnvl2mb" path="res://scenes/menus/pause_menu.tscn" id="2_uoo6s"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Yellow" type="Sprite2D" parent="."]
+position = Vector2(570, 306)
+texture = ExtResource("1_cr2qm")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_uoo6s")]
