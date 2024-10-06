@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://wimnomav8xwu"]
+
+[ext_resource type="Texture2D" uid="uid://caj0frollln0v" path="res://assets/UI/Map.png" id="1_m6gyv"]
+[ext_resource type="PackedScene" uid="uid://vv81ptx4xpeh" path="res://scenes/menus/marker_button.tscn" id="2_n0ja8"]
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MapBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m6gyv")
+
+[node name="Markers" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarkerButton" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 22.525
+anchor_top = 6.975
+anchor_right = 24.425
+anchor_bottom = 8.875
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarkerButton2" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 8.025
+anchor_top = 6.9
+anchor_right = 9.925
+anchor_bottom = 8.8
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarkerButton3" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 21.275
+anchor_top = 12.075
+anchor_right = 23.175
+anchor_bottom = 13.975
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarkerButton4" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 5.65
+anchor_top = 12.575
+anchor_right = 7.55
+anchor_bottom = 14.475
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarkerButton5" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 16.725
+anchor_top = 9.775
+anchor_right = 18.625
+anchor_bottom = 11.675
+grow_horizontal = 1
+grow_vertical = 1

@@ -22,7 +22,7 @@ func resume():
 
 func restart():
 	resume()
-	get_tree().reload_current_scene()
+	SceneChanger.restart()
 
 func pause():
 	get_tree().paused = true

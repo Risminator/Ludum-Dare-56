@@ -1,0 +1,181 @@
+[gd_scene load_steps=16 format=3 uid="uid://cjmkpeb4lfaf4"]
+
+[ext_resource type="Script" path="res://scripts/screen_shake.gd" id="1_4v8we"]
+[ext_resource type="PackedScene" uid="uid://cy57oxfnuh257" path="res://scenes/hand.tscn" id="1_5g20p"]
+[ext_resource type="Script" path="res://scripts/base_level.gd" id="1_i3k5c"]
+[ext_resource type="PackedScene" uid="uid://bd7b1sxnvl2mb" path="res://scenes/menus/pause_menu.tscn" id="2_5i0uf"]
+[ext_resource type="FontFile" uid="uid://d4g1cp4nnnshb" path="res://assets/fonts/Test Font.ttf" id="5_wdl50"]
+[ext_resource type="Texture2D" uid="uid://dd7ubahldr8dc" path="res://assets/UI/Button_Map_Hover.png" id="6_davks"]
+[ext_resource type="Texture2D" uid="uid://dccasubd22oyh" path="res://assets/UI/Button_Map_Press.png" id="7_6g6gv"]
+[ext_resource type="Texture2D" uid="uid://c4v3kbn71ql65" path="res://assets/UI/Button_Map.png" id="8_2yaim"]
+
+[sub_resource type="Animation" id="Animation_7mdp0"]
+resource_name = "AppearDisappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(240, 100), Vector2(240, 160)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%StartLabel/../../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_game"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_i2m1l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(240, 160)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c823l"]
+_data = {
+"AppearDisappear": SubResource("Animation_7mdp0"),
+"RESET": SubResource("Animation_i2m1l")
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_2ty43"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mu7fx"]
+texture = ExtResource("6_davks")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjsoj"]
+texture = ExtResource("7_6g6gv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gfpd"]
+texture = ExtResource("8_2yaim")
+
+[node name="BaseLevel" type="Node2D"]
+script = ExtResource("1_i3k5c")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Playerground" type="Node2D" parent="."]
+
+[node name="Hand" parent="Playerground" instance=ExtResource("1_5g20p")]
+unique_name_in_owner = true
+position = Vector2(736, 4)
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2(0, -2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_4v8we")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_5i0uf")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 2
+
+[node name="LabelContainer" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -260.0
+offset_right = 400.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartLabel" type="Label" parent="UI/LabelContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.5
+offset_top = -175.0
+offset_right = 296.5
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("5_wdl50")
+theme_override_font_sizes/font_size = 400
+text = "3"
+horizontal_alignment = 1
+
+[node name="StartAnimation" type="AnimationPlayer" parent="UI"]
+unique_name_in_owner = true
+root_node = NodePath("../LabelContainer/StartLabel")
+libraries = {
+"": SubResource("AnimationLibrary_c823l")
+}
+
+[node name="StartTimer" type="Timer" parent="UI"]
+unique_name_in_owner = true
+wait_time = 1.5
+one_shot = true
+
+[node name="ReturnToMapBtn" type="Button" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -172.0
+offset_top = 24.0
+offset_right = -28.0
+offset_bottom = 168.0
+grow_horizontal = 0
+theme_override_icons/icon = SubResource("ImageTexture_2ty43")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mu7fx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wjsoj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5gfpd")
+
+[connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="pressed" from="UI/ReturnToMapBtn" to="." method="_on_return_to_map_btn_pressed"]

@@ -16,7 +16,7 @@ func _ready():
 	pause.track_esc = false
 
 func start_game():
-	SceneChanger.change_to(Global.GAME_SCENES.GAME)
+	SceneChanger.change_to(Global.GAME_SCENES.TEST_LEVEL)
 	#Global.set_scene(Global.SCENES.CUTSCENE)
 	
 func quit_game():
@@ -27,9 +27,11 @@ func _on_start_btn_pressed():
 
 
 func _on_options_btn_pressed():
-	pause.visible = true
-	pause.pause()
+	Events.screen_shake.emit(10)
+	#pause.visible = true
+	#pause.pause()
 
 
 func _on_quit_btn_pressed():
 	quit_game.call_deferred()
+	
