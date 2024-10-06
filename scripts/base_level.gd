@@ -4,11 +4,13 @@ extends Node2D
 @onready var start_label: Label = %StartLabel
 @onready var hand: CharacterBody2D = %Hand
 @onready var start_animation: AnimationPlayer = %StartAnimation
+@onready var audio_player = %Global/MainAudioPlayer
 
 var start_counter: int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	audio_player.play()
 	start_label.text = str(start_counter)
 	get_tree().paused = true
 	Events.transition_complete.connect(_on_transition_complete)
