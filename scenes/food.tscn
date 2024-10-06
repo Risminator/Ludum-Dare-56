@@ -13,10 +13,9 @@ motion_mode = 1
 script = ExtResource("1_8rjac")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-293, 52)
 scale = Vector2(3.1875, 3.1875)
 texture = ExtResource("1_mca2u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-312.5, 51)
 shape = SubResource("RectangleShape2D_04xfp")
+disabled = true

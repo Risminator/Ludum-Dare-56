@@ -9,17 +9,23 @@ extends CharacterBody2D
 var is_controllable = false
 var rng = RandomNumberGenerator.new()
 
+@onready var own_food_collsion = $FoodHandCollision
+@onready var food_collision = $Area2D/FoodCollision
+
 func _ready() -> void:
+	own_food_collsion.shape = food_collision.shape
+	own_food_collsion.position = food_collision.position
 	Events.game_start.connect(_on_game_start)
 
 func _physics_process(_delta: float) -> void:
+	own_food_collsion.shape = food_collision.shape
 	if is_controllable:
 		var mouse_pos: Vector2 = get_global_mouse_position()
 		var mouse_speed: float = Input.get_last_mouse_velocity().length()
 		var mouse_distance: float = position.distance_to(mouse_pos)
 		var speed: float = min(mouse_distance / 0.1, max_speed)
 		
-		if mouse_speed > speed_limit and position.x < scare_limit_x:
+		if mouse_speed > speed_limit and position.x < scare_limit_x and velocity.x < 0:
 			Events.speed_limit_reached.emit()
 		
 		var direction: Vector2

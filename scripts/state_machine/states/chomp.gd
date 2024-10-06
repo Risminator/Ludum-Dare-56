@@ -3,6 +3,9 @@ extends State
 func enter() -> void:
 	super()
 
+func exit() -> void:
+	pass
+
 func process_input(_event: InputEvent) -> State:
 	return null
 

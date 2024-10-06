@@ -1,9 +1,14 @@
 class_name Animal
 extends StaticBody2D
 
-@onready var animations: AnimatedSprite2D = $Animations
+@onready var animations: AnimationPlayer = $Animations
 @onready var state_machine: Node = $StateMachine
 @onready var calm_timer: Timer = $CalmTimer
+@onready var chomp_timer: Timer = $ChompTImer
+@onready var cooldown_timer: Timer = $CooldownTimer
+
+@onready var touch_collider: Area2D = $TouchCollider
+@onready var feed_collider: Area2D = $FeedCollider
 
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,

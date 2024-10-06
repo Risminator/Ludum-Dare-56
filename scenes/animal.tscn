@@ -1,80 +1,130 @@
-[gd_scene load_steps=18 format=3 uid="uid://xbu57lkb77xa"]
+[gd_scene load_steps=19 format=3 uid="uid://xbu57lkb77xa"]
 
 [ext_resource type="Script" path="res://scripts/state_machine/animal.gd" id="1_1sxch"]
-[ext_resource type="Texture2D" uid="uid://bk182vslgmxgd" path="res://assets/temp/Rabbit/Rabbit test жует1.png" id="2_7aq83"]
+[ext_resource type="Texture2D" uid="uid://r3xl0phwtuud" path="res://assets/creatures/rabbit_sheet.png" id="2_j17p5"]
 [ext_resource type="Script" path="res://scripts/state_machine/state_machine.gd" id="2_yl4r7"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/frightened.gd" id="3_8t8pi"]
-[ext_resource type="Texture2D" uid="uid://batiy2ht7barf" path="res://assets/temp/Rabbit/Rabbit test жует2.png" id="3_r28yh"]
-[ext_resource type="Texture2D" uid="uid://5vfjmxh58hqk" path="res://assets/temp/Rabbit/Rabbit test кусь.png" id="4_1s3d4"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/idle.gd" id="4_otxx3"]
-[ext_resource type="Texture2D" uid="uid://dt7njqdmktvgx" path="res://assets/temp/Rabbit/Rabbit test scared.png" id="5_0byu5"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/open.gd" id="5_rgdlx"]
-[ext_resource type="Texture2D" uid="uid://c0d2q0oyqwac0" path="res://assets/temp/Rabbit/Rabbit test.png" id="6_e2bkn"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/chomp.gd" id="6_j1x1f"]
-[ext_resource type="Texture2D" uid="uid://nkj728qfor7p" path="res://assets/temp/Rabbit/Rabbit test -O-.png" id="7_blf7p"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/chewing.gd" id="7_f41cr"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/satisfied.gd" id="8_c8hpr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbrkq"]
-atlas = ExtResource("6_e2bkn")
-region = Rect2(0, 0, 493, 720)
+[sub_resource type="Animation" id="Animation_thdp5"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qteaq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_7aq83")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_r28yh")
-}],
-"loop": true,
-"name": &"chewing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_1s3d4")
-}],
-"loop": false,
-"name": &"chomp",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_0byu5")
-}],
-"loop": false,
-"name": &"frightened",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hbrkq")
-}],
-"loop": false,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_blf7p")
-}],
-"loop": false,
-"name": &"open",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_7aq83")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_r28yh")
-}],
-"loop": true,
-"name": &"satisfied",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_1w5cp"]
+resource_name = "frightened"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_s44qc"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_nytu0"]
+resource_name = "chomp"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_rddwh"]
+resource_name = "chewing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_w67g4"]
+resource_name = "satisfied"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_38stx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7on56"]
+_data = {
+"RESET": SubResource("Animation_38stx"),
+"chewing": SubResource("Animation_rddwh"),
+"chomp": SubResource("Animation_nytu0"),
+"frightened": SubResource("Animation_1w5cp"),
+"idle": SubResource("Animation_thdp5"),
+"open": SubResource("Animation_s44qc"),
+"satisfied": SubResource("Animation_w67g4")
+}
 
 [sub_resource type="GDScript" id="GDScript_8xhjq"]
 script/source = "extends Label
@@ -96,14 +146,28 @@ collision_mask = 3
 script = ExtResource("1_1sxch")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(82, -93, 130, 11, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)
+polygon = PackedVector2Array(76, -91, 114, 7, 86, 89, 76, 167, 109, 246, 81, 246, -99, 246, -125, 211, -89, 110, -17, 52, -51, -11, -46, -72, -108, -124, -89, -235, -25, -96, 50, -89, 126, -227, 116, -128)
 
-[node name="Animations" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_qteaq")
-animation = &"idle"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_j17p5")
+hframes = 4
+frame = 1
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7on56")
+}
 
 [node name="CalmTimer" type="Timer" parent="."]
 wait_time = 2.5
+one_shot = true
+
+[node name="ChompTImer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="CooldownTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
@@ -122,13 +186,15 @@ offset_right = 106.0
 offset_bottom = -253.0
 script = SubResource("GDScript_8xhjq")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("frightened_state")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("frightened_state", "open_state")]
 script = ExtResource("4_otxx3")
 frightened_state = NodePath("../Frightened")
+open_state = NodePath("../Open")
 animation_name = "idle"
 
-[node name="Open" type="Node" parent="StateMachine"]
+[node name="Open" type="Node" parent="StateMachine" node_paths=PackedStringArray("chomp_state")]
 script = ExtResource("5_rgdlx")
+chomp_state = NodePath("../Chomp")
 animation_name = "open"
 
 [node name="Chomp" type="Node" parent="StateMachine"]
@@ -148,13 +214,10 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TouchCollider"]
-polygon = PackedVector2Array(82, -93, 130, 11, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)
+polygon = PackedVector2Array(82, -93, -39, -17, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)
 
 [node name="FeedCollider" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FeedCollider"]
-
-[connection signal="body_entered" from="TouchCollider" to="StateMachine/Frightened" method="_on_touch_collider_body_entered"]
-[connection signal="body_entered" from="TouchCollider" to="StateMachine/Idle" method="_on_touch_collider_body_entered"]
