@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cy57oxfnuh257"]
 
 [ext_resource type="Script" path="res://scripts/hand.gd" id="1_xynge"]
-[ext_resource type="Texture2D" uid="uid://cfr1q3s5082yo" path="res://assets/hand/hand_sheet.png" id="2_3atit"]
+[ext_resource type="Texture2D" uid="uid://d0e5chnscdg6n" path="res://assets/creatures/hand_sheet.png" id="2_cccai"]
 
 [node name="Hand" type="CharacterBody2D"]
 collision_mask = 5
@@ -10,10 +10,10 @@ script = ExtResource("1_xynge")
 min_x = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_3atit")
+texture = ExtResource("2_cccai")
 offset = Vector2(55, -45)
 hframes = 4
-vframes = 2
+vframes = 3
 frame = 4
 
 [node name="FoodHandCollision" type="CollisionPolygon2D" parent="."]
