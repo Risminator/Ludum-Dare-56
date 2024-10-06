@@ -55,5 +55,6 @@ func _on_calm_timer_timeout() -> void:
 
 
 func _on_touch_collider_body_entered(body: Node2D) -> void:
+	body.velocity = Vector2(2000, 0)
 	if parent.cooldown_timer.is_stopped():
 		parent.flee()

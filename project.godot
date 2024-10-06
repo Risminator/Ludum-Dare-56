@@ -47,6 +47,7 @@ pause={
 2d_physics/layer_1="hand"
 2d_physics/layer_2="food"
 2d_physics/layer_3="animal"
+2d_physics/layer_4="mouth"
 
 [rendering]
 

@@ -78,3 +78,5 @@ anchor_right = 18.625
 anchor_bottom = 11.675
 grow_horizontal = 1
 grow_vertical = 1
+
+[connection signal="pressed" from="Markers/MarkerButton" to="Markers/MarkerButton" method="_on_pressed"]

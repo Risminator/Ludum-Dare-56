@@ -2,6 +2,7 @@ extends State
 
 func enter() -> void:
 	super()
+	parent.cpu_particles_2d.emitting = true
 
 func process_input(_event: InputEvent) -> State:
 	return null

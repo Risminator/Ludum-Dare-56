@@ -9,3 +9,5 @@ signal speed_limit_reached
 signal transition_complete
 
 signal animal_touched
+signal satisfied_animal
+signal chomp_successful

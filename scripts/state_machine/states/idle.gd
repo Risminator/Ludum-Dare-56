@@ -55,6 +55,7 @@ func _on_speed_limit_reached() -> void:
 
 
 func _on_touch_collider_body_entered(body: Node2D) -> void:
+	body.velocity = Vector2(2000, 0)
 	if parent.cooldown_timer.is_stopped():
 		current_state = AVAILABLE_STATES.Frightened
 		frightened_counter = 0

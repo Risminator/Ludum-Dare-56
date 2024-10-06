@@ -10,6 +10,9 @@ extends StaticBody2D
 @onready var touch_collider: Area2D = $TouchCollider
 @onready var feed_collider: Area2D = $FeedCollider
 
+@onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
+
+
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,
 	# that way they can move and react accordingly
