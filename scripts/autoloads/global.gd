@@ -2,12 +2,12 @@ extends Node
 
 enum GAME_SCENES {
 	MAIN_MENU,
-	TEST_LEVEL,
+	RABBIT_LEVEL,
 	MAP
 }
 
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
-const TEST_LEVEL_PATH = "res://scenes/levels/test_level.tscn"
+const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
 const MAP_PATH = "res://scenes/menus/map.tscn"
 
 #const SCENES = {

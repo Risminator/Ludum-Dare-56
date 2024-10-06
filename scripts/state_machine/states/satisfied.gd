@@ -2,7 +2,9 @@ extends State
 
 func enter() -> void:
 	super()
-	parent.cpu_particles_2d.emitting = true
+	parent.gpu_particles_2d.emitting = true
+	parent.physical_collider.disabled = false
+	parent.physical_collider.polygon = parent.touch_polygon.polygon
 
 func process_input(_event: InputEvent) -> State:
 	return null

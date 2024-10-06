@@ -24,12 +24,14 @@ func enter() -> void:
 	calm_timer.start()
 	
 	parent.touch_collider.body_entered.connect(_on_touch_collider_body_entered)
+	parent.touch_collider.area_entered.connect(_on_touch_collider_body_entered)
+
 
 func exit() -> void:
 	Events.speed_limit_reached.disconnect(_on_speed_limit_reached)
 	calm_timer.timeout.disconnect(_on_calm_timer_timeout)
 	parent.touch_collider.body_entered.disconnect(_on_touch_collider_body_entered)
-
+	parent.touch_collider.area_entered.disconnect(_on_touch_collider_body_entered)
 
 func process_input(_event: InputEvent) -> State:
 	return null
@@ -55,7 +57,6 @@ func _on_speed_limit_reached() -> void:
 
 
 func _on_touch_collider_body_entered(body: Node2D) -> void:
-	body.velocity = Vector2(2000, 0)
 	if parent.cooldown_timer.is_stopped():
 		current_state = AVAILABLE_STATES.Frightened
 		frightened_counter = 0

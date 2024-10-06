@@ -1,13 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://cjmkpeb4lfaf4"]
+[gd_scene load_steps=31 format=3 uid="uid://cjmkpeb4lfaf4"]
 
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="1_4v8we"]
 [ext_resource type="PackedScene" uid="uid://cy57oxfnuh257" path="res://scenes/hand.tscn" id="1_5g20p"]
 [ext_resource type="Script" path="res://scripts/base_level.gd" id="1_i3k5c"]
 [ext_resource type="PackedScene" uid="uid://bd7b1sxnvl2mb" path="res://scenes/menus/pause_menu.tscn" id="2_5i0uf"]
 [ext_resource type="FontFile" uid="uid://d4g1cp4nnnshb" path="res://assets/fonts/Test Font.ttf" id="5_wdl50"]
-[ext_resource type="Texture2D" uid="uid://dd7ubahldr8dc" path="res://assets/UI/Button_Map_Hover.png" id="6_davks"]
-[ext_resource type="Texture2D" uid="uid://dccasubd22oyh" path="res://assets/UI/Button_Map_Press.png" id="7_6g6gv"]
-[ext_resource type="Texture2D" uid="uid://c4v3kbn71ql65" path="res://assets/UI/Button_Map.png" id="8_2yaim"]
+[ext_resource type="StyleBox" uid="uid://b3cr6s2av68ol" path="res://resources/UI/button_hover.tres" id="6_2f0ut"]
+[ext_resource type="Texture2D" uid="uid://dd7ubahldr8dc" path="res://assets/UI/Button_map_hover.png" id="6_davks"]
+[ext_resource type="Texture2D" uid="uid://dccasubd22oyh" path="res://assets/UI/Button_map_press.png" id="7_6g6gv"]
+[ext_resource type="StyleBox" uid="uid://c036q7lldrr7h" path="res://resources/UI/button_pressed.tres" id="7_hdnrq"]
+[ext_resource type="Texture2D" uid="uid://c4v3kbn71ql65" path="res://assets/UI/Button_map.png" id="8_2yaim"]
+[ext_resource type="StyleBox" uid="uid://bineearsmv4jn" path="res://resources/UI/button_normal.tres" id="8_tcnxy"]
 [ext_resource type="AudioStream" uid="uid://c1ytm5ibjt1tm" path="res://assets/sounds/music/mountain_layers/mountain_chords_synth.wav" id="9_k8yap"]
 [ext_resource type="AudioStream" uid="uid://bot18q0drdlik" path="res://assets/sounds/music/mountain_layers/mountain_melody_synth.wav" id="10_w6u34"]
 [ext_resource type="AudioStream" uid="uid://boc3b0dyrnm4c" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_synth.wav" id="11_e8qec"]
@@ -90,7 +93,13 @@ _data = {
 "RESET": SubResource("Animation_i2m1l")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fq2vb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yh7nq"]
+
 [sub_resource type="ImageTexture" id="ImageTexture_2ty43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iw6md"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mu7fx"]
 texture = ExtResource("6_davks")
@@ -219,25 +228,57 @@ unique_name_in_owner = true
 wait_time = 1.5
 one_shot = true
 
-[node name="ReturnToMapBtn" type="Button" parent="UI"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -172.0
-offset_top = 24.0
-offset_right = -28.0
-offset_bottom = 168.0
+offset_left = -266.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = 84.0
 grow_horizontal = 0
+theme_override_constants/separation = 15
+
+[node name="RestartBtn" type="Button" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_wdl50")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = ExtResource("8_tcnxy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fq2vb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yh7nq")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_2f0ut")
+theme_override_styles/hover_pressed = ExtResource("6_2f0ut")
+theme_override_styles/hover_mirrored = ExtResource("6_2f0ut")
+theme_override_styles/hover = ExtResource("6_2f0ut")
+theme_override_styles/pressed_mirrored = ExtResource("7_hdnrq")
+theme_override_styles/pressed = ExtResource("7_hdnrq")
+theme_override_styles/normal_mirrored = ExtResource("6_2f0ut")
+theme_override_styles/normal = ExtResource("8_tcnxy")
+disabled = true
+text = " Restart "
+
+[node name="ReturnToMapBtn" type="Button" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
 theme_override_icons/icon = SubResource("ImageTexture_2ty43")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iw6md")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mu7fx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wjsoj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5gfpd")
+disabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = SubResource("AudioStreamSynchronized_mami6")
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = SubResource("AudioStreamInteractive_rofdm")
 
 [connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
-[connection signal="pressed" from="UI/ReturnToMapBtn" to="." method="_on_return_to_map_btn_pressed"]
+[connection signal="pressed" from="UI/HBoxContainer/RestartBtn" to="." method="_on_restart_btn_pressed"]
+[connection signal="pressed" from="UI/HBoxContainer/ReturnToMapBtn" to="." method="_on_return_to_map_btn_pressed"]

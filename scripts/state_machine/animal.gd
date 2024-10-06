@@ -8,9 +8,12 @@ extends StaticBody2D
 @onready var cooldown_timer: Timer = $CooldownTimer
 
 @onready var touch_collider: Area2D = $TouchCollider
-@onready var feed_collider: Area2D = $FeedCollider
+@onready var touch_polygon: CollisionPolygon2D = $TouchCollider/TouchPolygon
 
-@onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
+@onready var feed_collider: Area2D = $FeedCollider2
+@onready var physical_collider: CollisionPolygon2D = $PhysicalCollider
+
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
 
 func _ready() -> void:
@@ -28,4 +31,4 @@ func _process(delta: float) -> void:
 	state_machine.process_frame(delta)
 	
 func flee():
-	queue_free()
+	animations.play("flee")

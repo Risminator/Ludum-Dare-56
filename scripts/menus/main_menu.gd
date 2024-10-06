@@ -16,7 +16,7 @@ func _ready():
 	pause.track_esc = false
 
 func start_game():
-	SceneChanger.change_to(Global.GAME_SCENES.TEST_LEVEL)
+	SceneChanger.change_to(Global.GAME_SCENES.RABBIT_LEVEL)
 	#Global.set_scene(Global.SCENES.CUTSCENE)
 	
 func quit_game():

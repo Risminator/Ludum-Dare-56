@@ -12,7 +12,7 @@ func enter() -> void:
 
 func exit() -> void:
 	parent.chomp_timer.timeout.disconnect(_on_chomp_timer_timeout)
-	#Events.satisfied_animal.disconnect(_on_satsified)
+	Events.satisfied_animal.disconnect(_on_satsified)
 
 func process_input(_event: InputEvent) -> State:
 	return null

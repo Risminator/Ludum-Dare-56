@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7ubahldr8dc"
-path="res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"
+uid="uid://b5dyvclts3mxg"
+path="res://.godot/imported/Axolotl.png-79c57d0d1413972bbe2e815cc572ec4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Button_map_hover.png"
-dest_files=["res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"]
+source_file="res://assets/UI/Axolotl.png"
+dest_files=["res://.godot/imported/Axolotl.png-79c57d0d1413972bbe2e815cc572ec4e.ctex"]
 
 [params]
 

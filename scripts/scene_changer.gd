@@ -11,8 +11,8 @@ func change_to(new_scene: Global.GAME_SCENES):
 	match new_scene:
 		Global.GAME_SCENES.MAIN_MENU:
 			new_scene_path = Global.MAIN_MENU_PATH
-		Global.GAME_SCENES.TEST_LEVEL:
-			new_scene_path = Global.TEST_LEVEL_PATH
+		Global.GAME_SCENES.RABBIT_LEVEL:
+			new_scene_path = Global.RABBIT_LEVEL_PATH
 		Global.GAME_SCENES.MAP:
 			new_scene_path = Global.MAP_PATH
 	if animation_player.is_playing():

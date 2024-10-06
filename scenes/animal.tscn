@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://xbu57lkb77xa"]
+[gd_scene load_steps=21 format=3 uid="uid://xbu57lkb77xa"]
 
 [ext_resource type="Script" path="res://scripts/state_machine/animal.gd" id="1_1sxch"]
 [ext_resource type="Texture2D" uid="uid://r3xl0phwtuud" path="res://assets/creatures/rabbit_sheet.png" id="2_j17p5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/state_machine/states/chomp.gd" id="6_j1x1f"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/chewing.gd" id="7_f41cr"]
 [ext_resource type="Script" path="res://scripts/state_machine/states/satisfied.gd" id="8_c8hpr"]
+[ext_resource type="Texture2D" uid="uid://bymvjbvvp4yny" path="res://assets/UI/Hearts.png" id="10_cuvde"]
 
 [sub_resource type="Animation" id="Animation_38stx"]
 length = 0.001
@@ -27,38 +28,62 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("FeedCollider/FeedPolygon:polygon")
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array()]
+"values": [PackedVector2Array(82, -93, -39, -17, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(82, -93, -39, -17, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)]
+"update": 1,
+"values": [true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
+tracks/3/path = NodePath(".:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-360, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_rddwh"]
@@ -87,18 +112,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("FeedCollider/FeedPolygon:polygon")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array()]
-}
 
 [sub_resource type="Animation" id="Animation_nytu0"]
 resource_name = "chomp"
@@ -124,27 +137,15 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 23, 34, 22, 81, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 187, -10, 151, 62, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("FeedCollider/FeedPolygon:polygon")
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(212, -55, 63, -21, 28, 72, 173, 106, 246, 51, 253, -19)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0.0333333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -177,18 +178,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("FeedCollider/FeedPolygon:polygon")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array()]
-}
 
 [sub_resource type="Animation" id="Animation_thdp5"]
 resource_name = "idle"
@@ -219,22 +208,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("FeedCollider/FeedPolygon:polygon")
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array()]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -297,14 +274,67 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("FeedCollider/FeedPolygon:polygon")
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t667i"]
+resource_name = "flee"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [PackedVector2Array()]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-360, 0), Vector2(-600, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7on56"]
@@ -312,33 +342,22 @@ _data = {
 "RESET": SubResource("Animation_38stx"),
 "chewing": SubResource("Animation_rddwh"),
 "chomp": SubResource("Animation_nytu0"),
+"flee": SubResource("Animation_t667i"),
 "frightened": SubResource("Animation_1w5cp"),
 "idle": SubResource("Animation_thdp5"),
 "open": SubResource("Animation_s44qc"),
 "satisfied": SubResource("Animation_w67g4")
 }
 
-[sub_resource type="GDScript" id="GDScript_8xhjq"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	text = str($\"..\".flee_counter)
-"
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_77cfh"]
-particles_animation = true
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = true
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3lxpd"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 203.12
+initial_velocity_max = 203.12
+gravity = Vector3(0, 98, 0)
 
 [node name="Animal" type="StaticBody2D"]
+position = Vector2(-360, 0)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_1sxch")
@@ -358,11 +377,14 @@ libraries = {
 wait_time = 2.5
 one_shot = true
 
+[node name="OpenTimer" type="Timer" parent="."]
+
 [node name="ChompTImer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 one_shot = true
 
 [node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
@@ -373,13 +395,6 @@ starting_state = NodePath("Idle")
 script = ExtResource("3_8t8pi")
 idle_state = NodePath("../Idle")
 animation_name = "frightened"
-
-[node name="Label" type="Label" parent="StateMachine/Frightened"]
-offset_left = -68.0
-offset_top = -319.0
-offset_right = 106.0
-offset_bottom = -253.0
-script = SubResource("GDScript_8xhjq")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("frightened_state", "open_state")]
 script = ExtResource("4_otxx3")
@@ -424,20 +439,13 @@ collision_mask = 2
 polygon = PackedVector2Array(212, -55, 63, -21, 28, 72, 173, 106, 246, 51, 253, -19)
 disabled = true
 
-[node name="FeedCollider" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 2
+[node name="PhysicalCollider" type="CollisionPolygon2D" parent="."]
+disabled = true
 
-[node name="FeedPolygon" type="CollisionPolygon2D" parent="FeedCollider"]
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-modulate = Color(0.491488, 0.731645, 0, 1)
-material = SubResource("CanvasItemMaterial_77cfh")
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = 2
+position = Vector2(68, -67)
 emitting = false
-emission_shape = 3
-emission_rect_extents = Vector2(100, 1)
-gravity = Vector2(0, -300)
-radial_accel_max = 47.15
-scale_amount_min = 40.65
-scale_amount_max = 73.17
-anim_speed_max = 4.25
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_3lxpd")
+texture = ExtResource("10_cuvde")

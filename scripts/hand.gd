@@ -40,32 +40,20 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 		if position.x < min_x:
 			position.x = min_x
-		
-		var areas: Array[Area2D] = $Area2D.get_overlapping_areas()
-		if areas.size() > 0:
-			print("AAA")
-			_on_chomp_successful()
 
 func _on_game_start():
 	is_controllable = true
 
 
-#func _on_area_2d_area_entered(area: Area2D) -> void:
-	#hp -= 1
-	#animation_player.play("%s hp" % str(hp))
-	#if hp <= 0:
-		#Events.satisfied_animal.emit()
-		#animation_player.play("0 hp")
-		#print($Sprite2D.frame)
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.get_collision_layer_value(4):
+		hp -= 1
+		animation_player.play("%s hp" % str(hp))
+		if hp <= 0:
+			Events.satisfied_animal.emit()
+			animation_player.play("0 hp")
+			print($Sprite2D.frame)
 
 func _on_satisfied() -> void:
 	min_x = -500
 	print(hp)
-
-func _on_chomp_successful():
-	hp -= 1
-	animation_player.play("%s hp" % str(hp))
-	if hp <= 0:
-		Events.satisfied_animal.emit()
-		animation_player.play("0 hp")
-		print($Sprite2D.frame)

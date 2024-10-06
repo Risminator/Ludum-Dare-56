@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7ubahldr8dc"
-path="res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"
+uid="uid://bymvjbvvp4yny"
+path="res://.godot/imported/Hearts.png-a3f17e272a5d2382298ec702f8369209.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Button_map_hover.png"
-dest_files=["res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"]
+source_file="res://assets/UI/Hearts.png"
+dest_files=["res://.godot/imported/Hearts.png-a3f17e272a5d2382298ec702f8369209.ctex"]
 
 [params]
 

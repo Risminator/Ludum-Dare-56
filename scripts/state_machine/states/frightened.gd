@@ -18,6 +18,7 @@ func enter() -> void:
 	
 	Events.speed_limit_reached.connect(_on_speed_limit_reached)
 	parent.touch_collider.body_entered.connect(_on_touch_collider_body_entered)
+	parent.touch_collider.area_entered.connect(_on_touch_collider_body_entered)
 
 func exit() -> void:
 	if flee_limit > 0:
@@ -27,6 +28,7 @@ func exit() -> void:
 	calm_timer.stop()
 
 	parent.touch_collider.body_entered.disconnect(_on_touch_collider_body_entered)
+	parent.touch_collider.area_entered.disconnect(_on_touch_collider_body_entered)
 
 
 func process_input(_event: InputEvent) -> State:
@@ -55,6 +57,5 @@ func _on_calm_timer_timeout() -> void:
 
 
 func _on_touch_collider_body_entered(body: Node2D) -> void:
-	body.velocity = Vector2(2000, 0)
 	if parent.cooldown_timer.is_stopped():
 		parent.flee()
