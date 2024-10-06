@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=3 uid="uid://ckfbrvnahjls7"]
+
+[ext_resource type="AudioStream" uid="uid://bot18q0drdlik" path="res://assets/sounds/music/mountain_layers/mountain_melody_synth.wav" id="1_xrnmu"]
+[ext_resource type="AudioStream" uid="uid://d3w6bg2xfnmqc" path="res://assets/sounds/music/mountain_layers/mountain_melody_vocal.wav" id="2_4w70b"]
+[ext_resource type="AudioStream" uid="uid://boc3b0dyrnm4c" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_synth.wav" id="3_vpylp"]
+[ext_resource type="AudioStream" uid="uid://b55jyhd6qojdj" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_vocal.wav" id="4_snarb"]
+[ext_resource type="AudioStream" uid="uid://cw8x72ws0rqxk" path="res://assets/sounds/music/mountain_layers/mountain_sub.wav" id="5_bhnwr"]
+[ext_resource type="AudioStream" uid="uid://bnlmaiv5i5jvj" path="res://assets/sounds/music/mountain_layers/mountain_percusion.wav" id="6_0vtgc"]
+[ext_resource type="AudioStream" uid="uid://c1ytm5ibjt1tm" path="res://assets/sounds/music/mountain_layers/mountain_chords_synth.wav" id="7_b0x2w"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_lbudd"]
+stream_count = 2
+stream_0/stream = ExtResource("1_xrnmu")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_4w70b")
+stream_1/volume = 0.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_qqgp0"]
+stream_count = 2
+stream_0/stream = ExtResource("3_vpylp")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("4_snarb")
+stream_1/volume = 0.0
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_vafyy"]
+clip_count = 2
+clip_0/name = &"base"
+clip_0/stream = SubResource("AudioStreamSynchronized_lbudd")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"var"
+clip_1/stream = SubResource("AudioStreamSynchronized_qqgp0")
+clip_1/auto_advance = 0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_ampxi"]
+stream_count = 4
+stream_0/stream = SubResource("AudioStreamInteractive_vafyy")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("5_bhnwr")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("6_0vtgc")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("7_b0x2w")
+stream_3/volume = 0.0
+
+[node name="Global" type="Node2D"]
+
+[node name="MainAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamSynchronized_ampxi")
+autoplay = true
