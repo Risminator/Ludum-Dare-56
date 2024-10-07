@@ -107,3 +107,4 @@ func is_food_correct() -> bool:
 func _on_satisfied() -> void:
 	min_x = -300
 	is_animal_satisfied = true
+	print("Satisfied!")

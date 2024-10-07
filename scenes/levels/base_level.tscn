@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://exxo1i3rh8mf" path="res://assets/UI/hints_sheet.png" id="15_bsu4l"]
 [ext_resource type="Script" path="res://scripts/menus/tip.gd" id="15_jpu6q"]
 [ext_resource type="Texture2D" uid="uid://pec30085yaq0" path="res://assets/UI/Icon_food_dragonmeat.png" id="15_wpes3"]
-[ext_resource type="Texture2D" uid="uid://jnuaunskhvi" path="res://assets/UI/Icon_food_firecarrot.png" id="16_gmrhm"]
+[ext_resource type="PackedScene" uid="uid://c00dutuu0g4q" path="res://scenes/menus/food_button.tscn" id="16_e8f4t"]
 [ext_resource type="Texture2D" uid="uid://drkhwygs1na65" path="res://assets/UI/Icon_food_Berries.png" id="21_sl6df"]
 
 [sub_resource type="Animation" id="Animation_7mdp0"]
@@ -113,6 +113,10 @@ texture = ExtResource("7_6g6gv")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gfpd"]
 texture = ExtResource("8_2yaim")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6xnv"]
+atlas = ExtResource("15_bsu4l")
+region = Rect2(0, 0, 1024, 256)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4lxsf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wx828"]
@@ -156,10 +160,6 @@ texture = ExtResource("8_2yaim")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhb5r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vp4bj"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u6xnv"]
-atlas = ExtResource("15_bsu4l")
-region = Rect2(0, 0, 1024, 256)
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_i3k5c")
@@ -293,6 +293,23 @@ size_flags_vertical = 8
 texture = ExtResource("12_y84q6")
 expand_mode = 5
 
+[node name="Tip" type="TextureRect" parent="UI/VBoxContainer/Notepad"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -4.875
+offset_right = 139.0
+offset_bottom = 47.125
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_u6xnv")
+expand_mode = 3
+script = ExtResource("15_jpu6q")
+
 [node name="RightBtn" type="Button" parent="UI/VBoxContainer/Notepad"]
 layout_mode = 1
 anchors_preset = 6
@@ -342,59 +359,46 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_vp4bj")
 icon = ExtResource("14_ojko6")
 expand_icon = true
 
-[node name="Tip" type="TextureRect" parent="UI/VBoxContainer/Notepad"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -139.0
-offset_top = -4.875
-offset_right = 139.0
-offset_bottom = 47.125
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_u6xnv")
-expand_mode = 3
-script = ExtResource("15_jpu6q")
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer"]
-custom_minimum_size = Vector2(0, 72)
+custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_constants/separation = -1
+theme_override_constants/separation = 0
 
-[node name="1Carrot" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("16_gmrhm")
-expand_mode = 2
+food = 1
 
-[node name="2Meat" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button2" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("15_wpes3")
-expand_mode = 2
+icon = ExtResource("15_wpes3")
+food = 2
 
-[node name="3Apple" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button3" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("14_jtaoi")
-expand_mode = 2
+icon = ExtResource("14_jtaoi")
+food = 3
 
-[node name="4Mandrake" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button4" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("13_tjw4f")
-expand_mode = 2
+icon = ExtResource("13_tjw4f")
+food = 4
 
-[node name="5Fish" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button5" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("12_4pqpy")
-expand_mode = 2
+icon = ExtResource("12_4pqpy")
+food = 5
 
-[node name="6Berries" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+[node name="Button6" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
+custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
-texture = ExtResource("21_sl6df")
-expand_mode = 2
+icon = ExtResource("21_sl6df")
+food = 6
 
 [connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="pressed" from="UI/HBoxContainer/RestartBtn" to="." method="_on_restart_btn_pressed"]

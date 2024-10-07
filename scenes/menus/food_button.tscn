@@ -1,0 +1,46 @@
+[gd_scene load_steps=14 format=3 uid="uid://c00dutuu0g4q"]
+
+[ext_resource type="Texture2D" uid="uid://jnuaunskhvi" path="res://assets/UI/Icon_food_firecarrot.png" id="1_n8ykn"]
+[ext_resource type="Script" path="res://scripts/menus/food_button.gd" id="2_4wnv7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3vfiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x63cq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kdhh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ffkmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4lv0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k51q6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvwfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gaf0m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5wm7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13pa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yerb"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(94, 128)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3vfiv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_x63cq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kdhh8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ffkmc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_f4lv0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_k51q6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bvwfl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gaf0m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f5wm7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_13pa2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4yerb")
+icon = ExtResource("1_n8ykn")
+flat = true
+expand_icon = true
+script = ExtResource("2_4wnv7")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
