@@ -100,6 +100,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func is_food_correct() -> bool:
 	if animal is Rabbit and food != Global.FOOD.CARROT:
 		return false
+	if animal is Axolotl and food != Global.FOOD.FISH:
+		return false
 	return true
 
 func _on_satisfied() -> void:
