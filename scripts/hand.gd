@@ -8,27 +8,29 @@ extends CharacterBody2D
 
 var is_controllable: bool = false
 var rng = RandomNumberGenerator.new()
+#signal changed_food
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var food_area: Area2D = $Area2D
 
 @export var animal: Animal
 
-
 var hp: int = 3
+var max_hp: int = 3
 var food: Global.FOOD = Global.FOOD.CARROT
 var is_animal_satisfied: bool = false
 
 func _ready() -> void:
-	set_food(food, hp)
+	animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
 	Events.game_start.connect(_on_game_start)
 	Events.satisfied_animal.connect(_on_satisfied)
+	#changed_food.connect(_on_changed_food)
 	#Events.chomp_successful.connect(_on_chomp_successful)
 	
 
 func _physics_process(_delta: float) -> void:
-	get_keyboard_input()
 	if is_controllable:
+		if hp >= max_hp:
+			get_keyboard_input()
 		var mouse_pos: Vector2 = get_global_mouse_position()
 		var mouse_speed: float = Input.get_last_mouse_velocity().length()
 		var mouse_distance: float = position.distance_to(mouse_pos)
@@ -53,7 +55,7 @@ func _physics_process(_delta: float) -> void:
 					animal.gpu_particles_2d.amount = 2
 		elif get_slide_collision_count() > 0:
 			get_hurt()
-		print(food_area.get_overlapping_areas())
+		
 		#if animal != null and is_animal_satisfied:
 			#if get_slide_collision_count() > 0:
 				#if animal.gpu_particles_2d != null:
@@ -66,17 +68,21 @@ func _physics_process(_delta: float) -> void:
 			position.x = min_x
 
 func get_keyboard_input() -> void:
+	var new_food: Global.FOOD = food
 	if Input.is_action_just_pressed("1"):
-		food = Global.FOOD.CARROT
+		new_food = Global.FOOD.CARROT
 	if Input.is_action_just_pressed("2"):
-		food = Global.FOOD.MEAT
+		new_food = Global.FOOD.MEAT
 	if Input.is_action_just_pressed("3"):
-		food = Global.FOOD.APPLE
+		new_food = Global.FOOD.APPLE
 	if Input.is_action_just_pressed("4"):
-		food = Global.FOOD.MANDRAKE
+		new_food = Global.FOOD.MANDRAKE
 	if Input.is_action_just_pressed("5"):
-		food = Global.FOOD.FISH
-	set_food(food, hp)
+		new_food = Global.FOOD.FISH
+	if new_food != food:
+		food = new_food
+		animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
+	
 
 func get_hurt() -> void:
 	animation_player.play("hurt")
@@ -88,13 +94,15 @@ func _on_game_start() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_collision_layer_value(4):
 		hp -= 1
-		set_food(food, hp)
+		animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
 		if hp <= 0:
 			Events.satisfied_animal.emit()
 			print($Sprite2D.frame)
 
-func set_food(food: Global.FOOD, hp: int):
-	animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
+#func _on_changed_food() -> void:
+	#animation_player.stop()
+	#animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
+
 
 func _on_satisfied() -> void:
 	min_x = -300

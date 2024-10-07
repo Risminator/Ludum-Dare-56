@@ -14,4 +14,4 @@ position = Vector2(-360, 0)
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
 position = Vector2(555, -2)
-animal = NodePath("")
+animal = NodePath("../Animal")
