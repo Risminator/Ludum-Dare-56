@@ -2,8 +2,15 @@ extends Node
 
 enum GAME_SCENES {
 	MAIN_MENU,
+	START_CUTSCENE,
+	MAP,
 	RABBIT_LEVEL,
-	MAP
+	AXOLOTL_LEVEL,
+	MIMIC_LEVEL,
+	GOOSE_LEVEL,
+	TURTLE_LEVEL,
+	HAMSTER_LEVEL,
+	ENDING
 }
 
 enum FOOD {
@@ -12,7 +19,8 @@ enum FOOD {
 	MEAT,
 	APPLE,
 	MANDRAKE,
-	FISH
+	FISH,
+	BERRIES
 }
 
 enum STATES {
@@ -26,8 +34,18 @@ enum STATES {
 
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
 const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
+const AXOLOTL_LEVEL_PATH = ""
 const MAP_PATH = "res://scenes/menus/map.tscn"
 
+
+var BEATEN_LEVELS = {
+	GAME_SCENES.RABBIT_LEVEL: false,
+	GAME_SCENES.AXOLOTL_LEVEL: false,
+	GAME_SCENES.MIMIC_LEVEL: false,
+	GAME_SCENES.GOOSE_LEVEL: false,
+	GAME_SCENES.TURTLE_LEVEL: false,
+	GAME_SCENES.HAMSTER_LEVEL: false
+}
 
 var monsters_count: int = 1
 var visited_monsters_count: int = 0

@@ -30,3 +30,5 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_7yvnk")
 theme_override_styles/normal = SubResource("StyleBoxTexture_hiyon")
 script = ExtResource("4_patm5")
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -66,10 +66,12 @@ func get_keyboard_input() -> void:
 		new_food = Global.FOOD.MANDRAKE
 	if Input.is_action_just_pressed("5"):
 		new_food = Global.FOOD.FISH
+	if Input.is_action_just_pressed("6"):
+		new_food = Global.FOOD.BERRIES
+		
 	if new_food != food:
 		food = new_food
 		animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
-	
 
 func get_hurt() -> void:
 	Events.got_hurt.emit()

@@ -14,6 +14,7 @@ func _ready():
 	pause.btn_restart.visible = false
 	pause.visible = false
 	pause.track_esc = false
+	Events.transition_complete.emit(Global.GAME_SCENES.MAIN_MENU)
 
 func start_game():
 	SceneChanger.change_to(Global.GAME_SCENES.RABBIT_LEVEL)

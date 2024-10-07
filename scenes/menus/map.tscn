@@ -42,6 +42,7 @@ anchor_right = 24.425
 anchor_bottom = 8.875
 grow_horizontal = 1
 grow_vertical = 1
+level = 3
 
 [node name="MarkerButton2" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
@@ -79,7 +80,7 @@ anchor_bottom = 7.5
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="MarkerButton6" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="AxolotlButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 25.7
 anchor_top = 11.025
@@ -87,5 +88,4 @@ anchor_right = 27.6
 anchor_bottom = 12.925
 grow_horizontal = 1
 grow_vertical = 1
-
-[connection signal="pressed" from="Markers/RabbitButton" to="Markers/RabbitButton" method="_on_pressed"]
+level = 4
