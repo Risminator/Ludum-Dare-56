@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7ubahldr8dc"
-path="res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"
+uid="uid://duu0y65ysjrs8"
+path="res://.godot/imported/Hampster.png-d7f8e5f8bd346da37a40f6ac66951f02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Button_map_hover.png"
-dest_files=["res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"]
+source_file="res://assets/creatures/Hampster.png"
+dest_files=["res://.godot/imported/Hampster.png-d7f8e5f8bd346da37a40f6ac66951f02.ctex"]
 
 [params]
 

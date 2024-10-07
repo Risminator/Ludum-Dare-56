@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdyembco7wo8f"]
+
+[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_6g8ih"]
+[ext_resource type="Texture2D" uid="uid://d18gq0cit5gvo" path="res://assets/creatures/Axolotl.png" id="2_ru6rg"]
+[ext_resource type="AnimationLibrary" uid="uid://b3f0f0mr3b7ej" path="res://resources/axolotl_anims.res" id="3_uenih"]
+
+[node name="Axolotl" instance=ExtResource("1_6g8ih")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ru6rg")
+
+[node name="Animations" parent="." index="1"]
+libraries = {
+"": ExtResource("3_uenih")
+}
+
+[node name="FeedPolygon2" parent="FeedCollider2" index="0"]
+polygon = PackedVector2Array(119, -16, 57, -3, 27, 41, 46, 73, 118, 60, 130, 28)
+
+[node name="PhysicalCollider" parent="." index="9"]
+polygon = PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)

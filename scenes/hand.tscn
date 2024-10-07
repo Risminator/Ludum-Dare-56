@@ -416,7 +416,7 @@ script = ExtResource("1_xynge")
 texture = ExtResource("2_3atit")
 offset = Vector2(300, -60)
 hframes = 4
-vframes = 6
+vframes = 7
 frame = 4
 
 [node name="Area2D" type="Area2D" parent="."]

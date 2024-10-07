@@ -1,5 +1,5 @@
 class_name Animal
-extends StaticBody2D
+extends AnimatableBody2D
 
 @onready var animations: AnimationPlayer = $Animations
 @onready var state_machine: Node = $StateMachine

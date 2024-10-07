@@ -35,7 +35,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(82, -93, -39, -17, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)]
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -107,10 +107,10 @@ tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(32, -86, 33, -41, 35, -7, 52, 96, 38, 122, 57, 169, 36, 179, 27, 136, 0, 147, -3, 188, -21, 195, -17, 156, -83, 167, -80, 191, -97, 197, -108, 164, -146, 136, -191, 154, -247, 149, -284, 120, -309, 76, -314, 32, -274, 53, -231, 66, -194, 71, -174, 83, -156, 104, -89, 94, -33, 63, -35, -29, -17, -47), PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
 }
 
 [sub_resource type="Animation" id="Animation_nytu0"]
@@ -137,7 +137,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 187, -10, 151, 62, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(32, -86, 33, -41, 35, -7, 52, 96, 38, 122, 57, 169, 36, 179, 27, 136, 0, 147, -3, 188, -21, 195, -17, 156, -83, 167, -80, 191, -97, 197, -108, 164, -146, 136, -191, 154, -247, 149, -284, 120, -309, 76, -314, 32, -274, 53, -231, 66, -194, 71, -174, 83, -156, 104, -89, 94, -33, 63, -35, -29, -17, -47)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -229,7 +229,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(-51, -97, 35, -101, 90, -90, 118, -1, 100, 27, 72, 40, 0, 60, -27, 92, -18, 154, -32, 159, -41, 121, -68, 126, -72, 174, -91, 171, -86, 134, -151, 153, -144, 182, -169, 182, -180, 147, -216, 102, -267, 85, -285, 7, -222, -105, -220, -21, -190, 44, -196, 83, -128, 72, -92, 54, -101, -40, -75, -65)]
 }
 
 [sub_resource type="Animation" id="Animation_thdp5"]
@@ -256,7 +256,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -295,7 +295,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(16, -82, 40, -140, 97, -155, 175, -123, 216, -59, 62, -26, 24, 78, 166, 104, 145, 206, 116, 250, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(4, -92, 14, -50, 4, -5, 22, 82, 14, 122, 29, 170, 8, 182, 1, 139, -27, 148, -31, 192, -52, 194, -45, 157, -106, 169, -102, 194, -125, 200, -133, 167, -165, 144, -188, 124, -235, 128, -262, 117, -292, 62, -291, -54, -269, -6, -226, 32, -193, 46, -182, 95, -119, 93, -56, 66, -54, -33, -35, -44)]
 }
 
 [sub_resource type="Animation" id="Animation_w67g4"]
@@ -322,7 +322,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -356,8 +356,7 @@ initial_velocity_min = 203.12
 initial_velocity_max = 203.12
 gravity = Vector3(0, 98, 0)
 
-[node name="Animal" type="StaticBody2D"]
-modulate = Color(1, 1, 1, 0)
+[node name="Animal" type="AnimatableBody2D"]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_1sxch")
@@ -403,37 +402,32 @@ script = ExtResource("4_otxx3")
 frightened_state = NodePath("../Frightened")
 open_state = NodePath("../Open")
 animation_name = "idle"
-state_name = 1
 
 [node name="Open" type="Node" parent="StateMachine" node_paths=PackedStringArray("chomp_state")]
 script = ExtResource("5_rgdlx")
 chomp_state = NodePath("../Chomp")
 animation_name = "open"
-state_name = 2
 
 [node name="Chomp" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "satisfied_state")]
 script = ExtResource("6_j1x1f")
 idle_state = NodePath("../Idle")
 satisfied_state = NodePath("../Satisfied")
 animation_name = "chomp"
-state_name = 3
 
 [node name="Satisfied" type="Node" parent="StateMachine"]
 script = ExtResource("8_c8hpr")
 animation_name = "satisfied"
-state_name = 4
 
 [node name="Flee" type="Node" parent="StateMachine"]
 script = ExtResource("10_1t8pc")
 animation_name = "flee"
-state_name = 5
 
 [node name="TouchCollider" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 3
 
 [node name="TouchPolygon" type="CollisionPolygon2D" parent="TouchCollider"]
-polygon = PackedVector2Array(82, -93, -39, -17, 99, 96, 92, 160, 143, 230, 94, 262, -120, 258, -148, 192, -95, 94, -27, 58, -74, -12, -52, -67, -125, -123, -95, -276, -18, -103, 50, -101, 139, -267, 133, -125)
+polygon = PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)
 
 [node name="FeedCollider2" type="Area2D" parent="."]
 collision_layer = 8
@@ -444,6 +438,7 @@ polygon = PackedVector2Array(212, -55, 63, -21, 28, 72, 173, 106, 246, 51, 253, 
 disabled = true
 
 [node name="PhysicalCollider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(12, -79, 66, -104, 133, -74, 169, -30, 156, 42, 147, 64, 176, 106, 161, 203, 130, 244, 151, 286, 189, 296, 174, 320, 77, 326, 40, 278, -3, 296, 34, 310, -2, 326, -101, 317, -143, 282, -192, 244, -232, 221, -234, 186, -196, 165, -242, 101, -236, 41, -210, 39, -138, 43, -96, 59, 3, 32, -6, -5, -89, 8, -160, -27, -149, -63, -122, -43, -13, -50)
 disabled = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]

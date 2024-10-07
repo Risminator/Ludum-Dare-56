@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7ubahldr8dc"
-path="res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"
+uid="uid://drkhwygs1na65"
+path="res://.godot/imported/Icon_food_Berries.png-7e988285cb98e89676596cbf8717f275.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Button_map_hover.png"
-dest_files=["res://.godot/imported/Button_map_hover.png-d8c6cc58e0a15814333dffe2119ea818.ctex"]
+source_file="res://assets/UI/Icon_food_Berries.png"
+dest_files=["res://.godot/imported/Icon_food_Berries.png-7e988285cb98e89676596cbf8717f275.ctex"]
 
 [params]
 

@@ -10,9 +10,7 @@
 texture = ExtResource("2_5anq7")
 
 [node name="Rabbit" parent="Playerground" index="0" instance=ExtResource("3_ytj75")]
-modulate = Color(1, 1, 1, 1)
 position = Vector2(-360, 0)
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
-position = Vector2(555, -2)
 animal = NodePath("../Rabbit")

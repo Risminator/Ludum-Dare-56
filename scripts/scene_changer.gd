@@ -11,10 +11,13 @@ func change_to(new_scene: Global.GAME_SCENES):
 	match new_scene:
 		Global.GAME_SCENES.MAIN_MENU:
 			new_scene_path = Global.MAIN_MENU_PATH
-		Global.GAME_SCENES.RABBIT_LEVEL:
-			new_scene_path = Global.RABBIT_LEVEL_PATH
 		Global.GAME_SCENES.MAP:
 			new_scene_path = Global.MAP_PATH
+		Global.GAME_SCENES.RABBIT_LEVEL:
+			new_scene_path = Global.RABBIT_LEVEL_PATH
+		Global.GAME_SCENES.AXOLOTL_LEVEL:
+			new_scene_path = Global.AXOLOTL_LEVEL_PATH
+
 	if animation_player.is_playing():
 		animation_player.stop()
 	animation_player.play("fade_in_out")
