@@ -14,8 +14,9 @@ func _ready() -> void:
 	get_tree().paused = true
 	Events.transition_complete.connect(_on_transition_complete)
 	audio_stream_player_2d.play()
-	Events.game_lose.connect(_on_can_return_to_map)
-	Events.satisfied_animal.connect(_on_can_return_to_map)
+	Events.game_lose.connect(_on_can_restart)
+	Events.game_start.connect(_on_can_return_to_map)
+	Events.satisfied_animal.connect(_on_can_restart)
 
 
 func _on_start_timer_timeout() -> void:
@@ -35,10 +36,12 @@ func start_game() -> void:
 func _on_transition_complete() -> void:
 	start_timer.start()
 
-func _on_can_return_to_map() -> void:
-	%ReturnToMapBtn.disabled = false
+func _on_can_restart() -> void:
 	%RestartBtn.disabled = false
 	%RestartBtn.visible = true
+
+func _on_can_return_to_map() -> void:
+	%ReturnToMapBtn.disabled = false
 
 func _on_return_to_map_btn_pressed() -> void:
 	SceneChanger.change_to(Global.GAME_SCENES.MAP)

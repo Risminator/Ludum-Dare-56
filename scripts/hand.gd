@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Hand
 
 @export var max_speed = 1000.0
 @export var wobble_speed = 20.0
@@ -47,14 +48,11 @@ func _physics_process(_delta: float) -> void:
 			direction = position.direction_to(mouse_pos)
 		velocity = speed * direction
 		move_and_slide()
-		if is_animal_satisfied:
-			if animal != null:
-				if get_slide_collision_count() > 0:
-					animal.gpu_particles_2d.amount = 8
-				else:
-					animal.gpu_particles_2d.amount = 2
-		elif get_slide_collision_count() > 0:
-			get_hurt()
+		if is_animal_satisfied and animal != null:
+			if get_slide_collision_count() > 0:
+				animal.gpu_particles_2d.amount = 8
+			else:
+				animal.gpu_particles_2d.amount = 2
 		
 		#if animal != null and is_animal_satisfied:
 			#if get_slide_collision_count() > 0:
@@ -85,6 +83,9 @@ func get_keyboard_input() -> void:
 	
 
 func get_hurt() -> void:
+	print("Owch")
+	Events.screen_shake.emit(10)
+	wobble_speed = 50
 	animation_player.play("hurt")
 	animal.flee()
 
@@ -93,16 +94,24 @@ func _on_game_start() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_collision_layer_value(4):
-		hp -= 1
-		animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
-		if hp <= 0:
-			Events.satisfied_animal.emit()
+		Events.screen_shake.emit(5)
+		if is_food_correct():
+			hp -= 1
+			animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
+			if hp <= 0:
+				Events.satisfied_animal.emit()
 			print($Sprite2D.frame)
+		else:
+			animal.modulate = Color.DARK_OLIVE_GREEN
+			animal.flee()
 
 #func _on_changed_food() -> void:
 	#animation_player.stop()
 	#animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
-
+func is_food_correct() -> bool:
+	if animal is Rabbit and food != Global.FOOD.CARROT:
+		return false
+	return true
 
 func _on_satisfied() -> void:
 	min_x = -300

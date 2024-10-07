@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mcav1iue7q1"]
+
+[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_qivaq"]
+[ext_resource type="Script" path="res://scripts/animals/rabbit.gd" id="2_gsjhq"]
+
+[node name="Rabbit" instance=ExtResource("1_qivaq")]
+script = ExtResource("2_gsjhq")
+
+[node name="FeedCollider2" parent="." index="8"]
+collision_mask = 3

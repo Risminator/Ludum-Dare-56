@@ -1,6 +1,8 @@
 extends Node
+class_name StateMachine
 
 @export var starting_state: State
+@export var flee_state: State
 
 var current_state: State
 
@@ -21,7 +23,11 @@ func change_state(new_state: State) -> void:
 	current_state = new_state
 	print(current_state)
 	current_state.enter()
-	
+
+func flee():
+	change_state(flee_state)
+	Events.game_lose.emit()
+
 # Pass through functions for the Animal to call,
 # handling state changes as needed.
 func process_physics(delta: float) -> void:

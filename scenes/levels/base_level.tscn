@@ -292,6 +292,7 @@ offset_right = -24.0
 offset_bottom = 84.0
 grow_horizontal = 0
 theme_override_constants/separation = 15
+alignment = 2
 
 [node name="RestartBtn" type="Button" parent="UI/HBoxContainer"]
 unique_name_in_owner = true
@@ -318,6 +319,7 @@ text = " Restart "
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+size_flags_horizontal = 8
 theme_override_icons/icon = SubResource("ImageTexture_2ty43")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_iw6md")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mu7fx")

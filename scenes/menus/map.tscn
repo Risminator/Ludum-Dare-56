@@ -34,7 +34,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="MarkerButton" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="RabbitButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 22.525
 anchor_top = 6.975
@@ -54,29 +54,38 @@ grow_vertical = 1
 
 [node name="MarkerButton3" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
-anchor_left = 21.275
-anchor_top = 12.075
-anchor_right = 23.175
-anchor_bottom = 13.975
+anchor_left = 24.0
+anchor_top = 14.05
+anchor_right = 25.9
+anchor_bottom = 15.95
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="MarkerButton4" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
-anchor_left = 5.65
-anchor_top = 12.575
-anchor_right = 7.55
-anchor_bottom = 14.475
+anchor_left = 2.65
+anchor_top = 9.8
+anchor_right = 4.55
+anchor_bottom = 11.7
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="MarkerButton5" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
-anchor_left = 16.725
-anchor_top = 9.775
-anchor_right = 18.625
-anchor_bottom = 11.675
+anchor_left = 16.35
+anchor_top = 5.6
+anchor_right = 18.25
+anchor_bottom = 7.5
 grow_horizontal = 1
 grow_vertical = 1
 
-[connection signal="pressed" from="Markers/MarkerButton" to="Markers/MarkerButton" method="_on_pressed"]
+[node name="MarkerButton6" parent="Markers" instance=ExtResource("2_n0ja8")]
+layout_mode = 1
+anchor_left = 25.7
+anchor_top = 11.025
+anchor_right = 27.6
+anchor_bottom = 12.925
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="Markers/RabbitButton" to="Markers/RabbitButton" method="_on_pressed"]

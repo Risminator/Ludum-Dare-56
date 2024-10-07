@@ -16,7 +16,6 @@ extends StaticBody2D
 
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
-
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,
 	# that way they can move and react accordingly
@@ -32,5 +31,9 @@ func _process(delta: float) -> void:
 	state_machine.process_frame(delta)
 	
 func flee():
-	animations.play("flee")
-	Events.game_lose.emit()
+	state_machine.flee()
+
+
+func _on_feed_collider_2_body_entered(body: Node2D) -> void:
+	if body is Hand:
+		body.get_hurt()

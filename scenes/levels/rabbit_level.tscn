@@ -2,16 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://cjmkpeb4lfaf4" path="res://scenes/levels/base_level.tscn" id="1_1s3ar"]
 [ext_resource type="Texture2D" uid="uid://dwmvqs3sj4bax" path="res://assets/locations/Gori.png" id="2_5anq7"]
-[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animal.tscn" id="3_6uark"]
+[ext_resource type="PackedScene" uid="uid://c1mcav1iue7q1" path="res://scenes/animals/rabbit.tscn" id="3_ytj75"]
 
 [node name="BaseLevel" instance=ExtResource("1_1s3ar")]
 
 [node name="Gori" type="Sprite2D" parent="Background" index="0"]
 texture = ExtResource("2_5anq7")
 
-[node name="Animal" parent="Playerground" index="0" instance=ExtResource("3_6uark")]
+[node name="Rabbit" parent="Playerground" index="0" instance=ExtResource("3_ytj75")]
+modulate = Color(1, 1, 1, 1)
 position = Vector2(-360, 0)
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
 position = Vector2(555, -2)
-animal = NodePath("../Animal")
+animal = NodePath("../Rabbit")
