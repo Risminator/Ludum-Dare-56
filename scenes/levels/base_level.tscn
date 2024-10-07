@@ -225,7 +225,6 @@ libraries = {
 
 [node name="StartTimer" type="Timer" parent="UI"]
 unique_name_in_owner = true
-wait_time = 1.5
 one_shot = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://xxug38yri1yi"]
+
+[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_0gq5c"]
+[ext_resource type="Script" path="res://scripts/animals/mimic.gd" id="2_k21xf"]
+
+[node name="Mimic" instance=ExtResource("1_0gq5c")]
+script = ExtResource("2_k21xf")

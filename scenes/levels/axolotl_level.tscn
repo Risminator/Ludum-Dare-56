@@ -9,8 +9,8 @@
 [node name="Reka" type="Sprite2D" parent="Background" index="0"]
 texture = ExtResource("2_23ste")
 
-[node name="Axolotl" parent="Background" index="1" instance=ExtResource("3_rnsy2")]
+[node name="Axolotl" parent="Playerground" index="0" instance=ExtResource("3_rnsy2")]
 position = Vector2(-298, 121)
 
-[node name="Hand" parent="Playerground" index="0" node_paths=PackedStringArray("animal")]
-animal = NodePath("../../Background/Axolotl")
+[node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
+animal = NodePath("../Axolotl")

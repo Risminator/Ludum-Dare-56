@@ -1,5 +1,5 @@
 extends Animal
-class_name Axolotl
+class_name Mimic
 
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,
@@ -8,4 +8,4 @@ func _ready() -> void:
 	Events.satisfied_animal.connect(_on_satisfied_animal)
 	
 func _on_satisfied_animal() -> void:
-	Global.BEATEN_LEVELS[Global.GAME_SCENES.AXOLOTL_LEVEL] = true
+	Global.BEATEN_LEVELS[Global.GAME_SCENES.MIMIC_LEVEL] = true

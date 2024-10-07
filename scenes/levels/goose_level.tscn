@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxluox76j4xn7"]
+
+[ext_resource type="PackedScene" uid="uid://cjmkpeb4lfaf4" path="res://scenes/levels/base_level.tscn" id="1_gnsei"]
+[ext_resource type="Texture2D" uid="uid://csskcpxqoptmr" path="res://assets/locations/reka.png" id="2_6evgc"]
+[ext_resource type="PackedScene" uid="uid://c6u4xudis0imt" path="res://scenes/animals/goose.tscn" id="3_uslr6"]
+
+[node name="BaseLevel" instance=ExtResource("1_gnsei")]
+
+[node name="Reka" type="Sprite2D" parent="Background" index="0"]
+texture = ExtResource("2_6evgc")
+
+[node name="Goose" parent="Playerground" index="0" instance=ExtResource("3_uslr6")]
+position = Vector2(-360, 0)
+
+[node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
+animal = NodePath("../Goose")

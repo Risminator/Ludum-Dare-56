@@ -35,6 +35,10 @@ enum STATES {
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
 const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
 const AXOLOTL_LEVEL_PATH = "res://scenes/levels/axolotl_level.tscn"
+const MIMIC_LEVEL_PATH = "res://scenes/levels/mimic_level.tscn"
+const GOOSE_LEVEL_PATH = "res://scenes/levels/goose_level.tscn"
+const TURTLE_LEVEL_PATH = "res://scenes/levels/turtle_level.tscn"
+const HAMSTER_LEVEL_PATH = "res://scenes/levels/hamster_level.tscn"
 const MAP_PATH = "res://scenes/menus/map.tscn"
 
 

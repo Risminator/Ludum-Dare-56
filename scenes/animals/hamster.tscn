@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0bwvdb4qqdwe"]
+
+[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_mg68e"]
+[ext_resource type="Script" path="res://scripts/animals/hamster.gd" id="2_oujm3"]
+
+[node name="Hamster" instance=ExtResource("1_mg68e")]
+script = ExtResource("2_oujm3")

@@ -44,7 +44,7 @@ grow_horizontal = 1
 grow_vertical = 1
 level = 3
 
-[node name="MarkerButton2" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="TurtleButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 8.025
 anchor_top = 6.9
@@ -52,9 +52,9 @@ anchor_right = 9.925
 anchor_bottom = 8.8
 grow_horizontal = 1
 grow_vertical = 1
-level = 3
+level = 7
 
-[node name="MarkerButton3" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="GooseButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 24.0
 anchor_top = 14.05
@@ -62,9 +62,9 @@ anchor_right = 25.9
 anchor_bottom = 15.95
 grow_horizontal = 1
 grow_vertical = 1
-level = 3
+level = 6
 
-[node name="MarkerButton4" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="HamsterButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 2.65
 anchor_top = 9.8
@@ -72,9 +72,9 @@ anchor_right = 4.55
 anchor_bottom = 11.7
 grow_horizontal = 1
 grow_vertical = 1
-level = 3
+level = 8
 
-[node name="MarkerButton5" parent="Markers" instance=ExtResource("2_n0ja8")]
+[node name="MimicButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1
 anchor_left = 16.35
 anchor_top = 5.6
@@ -82,7 +82,7 @@ anchor_right = 18.25
 anchor_bottom = 7.5
 grow_horizontal = 1
 grow_vertical = 1
-level = 3
+level = 5
 
 [node name="AxolotlButton" parent="Markers" instance=ExtResource("2_n0ja8")]
 layout_mode = 1

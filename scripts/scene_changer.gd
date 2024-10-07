@@ -17,6 +17,14 @@ func change_to(new_scene: Global.GAME_SCENES):
 			new_scene_path = Global.RABBIT_LEVEL_PATH
 		Global.GAME_SCENES.AXOLOTL_LEVEL:
 			new_scene_path = Global.AXOLOTL_LEVEL_PATH
+		Global.GAME_SCENES.MIMIC_LEVEL:
+			new_scene_path = Global.MIMIC_LEVEL_PATH
+		Global.GAME_SCENES.GOOSE_LEVEL:
+			new_scene_path = Global.GOOSE_LEVEL_PATH
+		Global.GAME_SCENES.TURTLE_LEVEL:
+			new_scene_path = Global.TURTLE_LEVEL_PATH
+		Global.GAME_SCENES.HAMSTER_LEVEL:
+			new_scene_path = Global.HAMSTER_LEVEL_PATH
 
 	if animation_player.is_playing():
 		animation_player.stop()

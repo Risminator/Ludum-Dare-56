@@ -14,7 +14,7 @@ func _ready() -> void:
 	Events.transition_complete.connect(_on_transition_complete)
 	Events.game_lose.connect(_on_can_restart)
 	Events.game_start.connect(_on_can_return_to_map)
-	Events.satisfied_animal.connect(_on_can_restart)
+	#Events.satisfied_animal.connect(_on_can_restart)
 
 func _on_start_timer_timeout() -> void:
 	start_counter -= 1

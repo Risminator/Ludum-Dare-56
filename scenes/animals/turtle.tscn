@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwh0ww4njlvv8"]
+
+[ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_ddyt3"]
+[ext_resource type="Script" path="res://scripts/animals/turtle.gd" id="2_l1ocq"]
+
+[node name="Turtle" instance=ExtResource("1_ddyt3")]
+script = ExtResource("2_l1ocq")
