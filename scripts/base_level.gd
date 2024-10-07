@@ -17,7 +17,10 @@ func _ready() -> void:
 	Events.game_lose.connect(_on_can_restart)
 	Events.game_start.connect(_on_can_return_to_map)
 	Events.satisfied_animal.connect(_on_can_restart)
+	
 
+func _on_transition_start(new_scene: Global.GAME_SCENES) -> void:
+	print(new_scene)
 
 func _on_start_timer_timeout() -> void:
 	start_counter -= 1
@@ -33,7 +36,7 @@ func start_game() -> void:
 		get_tree().paused = false
 		Events.game_start.emit()
 		
-func _on_transition_complete() -> void:
+func _on_transition_complete(new_scene: Global.GAME_SCENES) -> void:
 	start_timer.start()
 
 func _on_can_restart() -> void:

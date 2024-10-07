@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cjmkpeb4lfaf4"]
+[gd_scene load_steps=54 format=3 uid="uid://cjmkpeb4lfaf4"]
 
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="1_4v8we"]
 [ext_resource type="PackedScene" uid="uid://cy57oxfnuh257" path="res://scenes/hand.tscn" id="1_5g20p"]
@@ -11,19 +11,12 @@
 [ext_resource type="StyleBox" uid="uid://c036q7lldrr7h" path="res://resources/UI/button_pressed.tres" id="7_hdnrq"]
 [ext_resource type="Texture2D" uid="uid://c4v3kbn71ql65" path="res://assets/UI/Button_map.png" id="8_2yaim"]
 [ext_resource type="StyleBox" uid="uid://bineearsmv4jn" path="res://resources/UI/button_normal.tres" id="8_tcnxy"]
-[ext_resource type="AudioStream" uid="uid://c1ytm5ibjt1tm" path="res://assets/sounds/music/mountain_layers/mountain_chords_synth.wav" id="9_k8yap"]
-[ext_resource type="AudioStream" uid="uid://bot18q0drdlik" path="res://assets/sounds/music/mountain_layers/mountain_melody_synth.wav" id="10_w6u34"]
-[ext_resource type="AudioStream" uid="uid://boc3b0dyrnm4c" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_synth.wav" id="11_e8qec"]
 [ext_resource type="Texture2D" uid="uid://bah5mgdk2afgv" path="res://assets/UI/Button_basic.png" id="12_2d00k"]
 [ext_resource type="Texture2D" uid="uid://c2c78u8oae482" path="res://assets/UI/Icon_food_Fish.png" id="12_4pqpy"]
-[ext_resource type="AudioStream" uid="uid://b55jyhd6qojdj" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_vocal.wav" id="12_ndra6"]
-[ext_resource type="AudioStream" uid="uid://d3w6bg2xfnmqc" path="res://assets/sounds/music/mountain_layers/mountain_melody_vocal.wav" id="13_66pi5"]
 [ext_resource type="Texture2D" uid="uid://dty6nuc1o4o1a" path="res://assets/UI/Icon_food_Mandragora.png" id="13_tjw4f"]
 [ext_resource type="Texture2D" uid="uid://mt2sf5jv6ndb" path="res://assets/UI/rightarrow.png" id="13_xfw0p"]
-[ext_resource type="AudioStream" uid="uid://bnlmaiv5i5jvj" path="res://assets/sounds/music/mountain_layers/mountain_percusion.wav" id="14_b8mkp"]
 [ext_resource type="Texture2D" uid="uid://b8ptl3216m772" path="res://assets/UI/Icon_food_eyepple.png" id="14_jtaoi"]
 [ext_resource type="Texture2D" uid="uid://bixw3yvgfp3bm" path="res://assets/UI/leftarrow.png" id="14_lppql"]
-[ext_resource type="AudioStream" uid="uid://cw8x72ws0rqxk" path="res://assets/sounds/music/mountain_layers/mountain_sub.wav" id="15_asdmd"]
 [ext_resource type="Script" path="res://scripts/menus/tip.gd" id="15_jpu6q"]
 [ext_resource type="Texture2D" uid="uid://pec30085yaq0" path="res://assets/UI/Icon_food_dragonmeat.png" id="15_wpes3"]
 [ext_resource type="Texture2D" uid="uid://jnuaunskhvi" path="res://assets/UI/Icon_food_firecarrot.png" id="16_gmrhm"]
@@ -165,55 +158,6 @@ texture = ExtResource("8_2yaim")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6xnv"]
 
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_mami6"]
-stream_count = 7
-stream_0/stream = ExtResource("9_k8yap")
-stream_0/volume = 0.0
-stream_1/stream = ExtResource("10_w6u34")
-stream_1/volume = 0.0
-stream_2/stream = ExtResource("11_e8qec")
-stream_2/volume = 0.0
-stream_3/stream = ExtResource("12_ndra6")
-stream_3/volume = 0.0
-stream_4/stream = ExtResource("13_66pi5")
-stream_4/volume = 0.0
-stream_5/stream = ExtResource("14_b8mkp")
-stream_5/volume = 0.0
-stream_6/stream = ExtResource("15_asdmd")
-stream_6/volume = 0.0
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_rofdm"]
-clip_count = 7
-clip_0/name = &"Mountain Chords Synth"
-clip_0/stream = ExtResource("9_k8yap")
-clip_0/auto_advance = 0
-clip_1/name = &"Mountain Melody Synth"
-clip_1/stream = ExtResource("10_w6u34")
-clip_1/auto_advance = 0
-clip_2/name = &"Mountain Melody Var Synth"
-clip_2/stream = ExtResource("11_e8qec")
-clip_2/auto_advance = 0
-clip_3/name = &"Mountain Melody Var Vocal"
-clip_3/stream = ExtResource("12_ndra6")
-clip_3/auto_advance = 0
-clip_4/name = &"Mountain Melody Vocal"
-clip_4/stream = ExtResource("13_66pi5")
-clip_4/auto_advance = 0
-clip_5/name = &"Mountain Percusion"
-clip_5/stream = ExtResource("14_b8mkp")
-clip_5/auto_advance = 0
-clip_6/name = &"Mountain Sub"
-clip_6/stream = ExtResource("15_asdmd")
-clip_6/auto_advance = 0
-_transitions = {
-Vector2i(-1, -1): {
-"fade_beats": 1,
-"fade_mode": 4,
-"from_time": 0,
-"to_time": 0
-}
-}
-
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_i3k5c")
 
@@ -244,9 +188,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -400.0
-offset_top = -260.0
+offset_top = -200.0
 offset_right = 400.0
-offset_bottom = 140.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -441,14 +385,6 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("12_4pqpy")
 expand_mode = 2
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-process_mode = 3
-stream = SubResource("AudioStreamSynchronized_mami6")
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-process_mode = 3
-stream = SubResource("AudioStreamInteractive_rofdm")
 
 [connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="pressed" from="UI/HBoxContainer/RestartBtn" to="." method="_on_restart_btn_pressed"]

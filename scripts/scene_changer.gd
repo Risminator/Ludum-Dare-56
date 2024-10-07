@@ -25,5 +25,8 @@ func restart():
 func _new_scene():
 	get_tree().change_scene_to_file.call_deferred(new_scene_path)
 
+func _on_transition_start():
+	Events.transition_start.emit(current_scene)
+
 func _on_transition_complete():
-	Events.transition_complete.emit()
+	Events.transition_complete.emit(current_scene)
