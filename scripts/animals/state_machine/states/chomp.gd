@@ -1,7 +1,6 @@
 extends State
 
 @export var idle_state: State
-@export var chewing_state: State
 @export var satisfied_state: State
 var satisfied: bool = false
 

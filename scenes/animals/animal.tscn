@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://xbu57lkb77xa"]
+[gd_scene load_steps=21 format=3 uid="uid://xbu57lkb77xa"]
 
 [ext_resource type="Script" path="res://scripts/animals/state_machine/animal.gd" id="1_1sxch"]
 [ext_resource type="Texture2D" uid="uid://r3xl0phwtuud" path="res://assets/creatures/rabbit_sheet.png" id="2_j17p5"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/idle.gd" id="4_otxx3"]
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/open.gd" id="5_rgdlx"]
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/chomp.gd" id="6_j1x1f"]
-[ext_resource type="Script" path="res://scripts/animals/state_machine/states/chewing.gd" id="7_f41cr"]
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/satisfied.gd" id="8_c8hpr"]
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/fleeing.gd" id="10_1t8pc"]
 [ext_resource type="Texture2D" uid="uid://bymvjbvvp4yny" path="res://assets/UI/Hearts.png" id="10_cuvde"]
@@ -404,32 +403,30 @@ script = ExtResource("4_otxx3")
 frightened_state = NodePath("../Frightened")
 open_state = NodePath("../Open")
 animation_name = "idle"
+state_name = 1
 
 [node name="Open" type="Node" parent="StateMachine" node_paths=PackedStringArray("chomp_state")]
 script = ExtResource("5_rgdlx")
 chomp_state = NodePath("../Chomp")
 animation_name = "open"
+state_name = 2
 
-[node name="Chomp" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "chewing_state", "satisfied_state")]
+[node name="Chomp" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "satisfied_state")]
 script = ExtResource("6_j1x1f")
 idle_state = NodePath("../Idle")
-chewing_state = NodePath("../Chewing")
 satisfied_state = NodePath("../Satisfied")
 animation_name = "chomp"
-
-[node name="Chewing" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state", "satisfied_state")]
-script = ExtResource("7_f41cr")
-idle_state = NodePath("../Idle")
-satisfied_state = NodePath("../Satisfied")
-animation_name = "chewing"
+state_name = 3
 
 [node name="Satisfied" type="Node" parent="StateMachine"]
 script = ExtResource("8_c8hpr")
 animation_name = "satisfied"
+state_name = 4
 
 [node name="Flee" type="Node" parent="StateMachine"]
 script = ExtResource("10_1t8pc")
 animation_name = "flee"
+state_name = 5
 
 [node name="TouchCollider" type="Area2D" parent="."]
 collision_layer = 4

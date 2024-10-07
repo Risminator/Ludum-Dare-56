@@ -83,7 +83,7 @@ func get_keyboard_input() -> void:
 	
 
 func get_hurt() -> void:
-	print("Owch")
+	Events.got_hurt.emit()
 	Events.screen_shake.emit(10)
 	wobble_speed = 50
 	animation_player.play("hurt")
@@ -94,6 +94,7 @@ func _on_game_start() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_collision_layer_value(4):
+		Events.chomp_successful.emit(food)
 		Events.screen_shake.emit(5)
 		if is_food_correct():
 			hp -= 1

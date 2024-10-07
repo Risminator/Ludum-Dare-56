@@ -15,6 +15,15 @@ enum FOOD {
 	FISH
 }
 
+enum STATES {
+	FRIGHTENED,
+	IDLE,
+	OPEN,
+	CHOMP,
+	SATISFIED,
+	FLEE
+}
+
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
 const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
 const MAP_PATH = "res://scenes/menus/map.tscn"
