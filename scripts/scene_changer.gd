@@ -11,6 +11,8 @@ func change_to(new_scene: Global.GAME_SCENES):
 	match new_scene:
 		Global.GAME_SCENES.MAIN_MENU:
 			new_scene_path = Global.MAIN_MENU_PATH
+		Global.GAME_SCENES.START_CUTSCENE:
+			new_scene_path = Global.START_CUTSCENE_PATH
 		Global.GAME_SCENES.MAP:
 			new_scene_path = Global.MAP_PATH
 		Global.GAME_SCENES.RABBIT_LEVEL:
@@ -25,6 +27,8 @@ func change_to(new_scene: Global.GAME_SCENES):
 			new_scene_path = Global.TURTLE_LEVEL_PATH
 		Global.GAME_SCENES.HAMSTER_LEVEL:
 			new_scene_path = Global.HAMSTER_LEVEL_PATH
+		Global.GAME_SCENES.ENDING:
+			new_scene_path = Global.ENDING_PATH
 
 	if animation_player.is_playing():
 		animation_player.stop()

@@ -17,7 +17,7 @@ func _ready():
 	Events.transition_complete.emit(Global.GAME_SCENES.MAIN_MENU)
 
 func start_game():
-	SceneChanger.change_to(Global.GAME_SCENES.RABBIT_LEVEL)
+	SceneChanger.change_to(Global.GAME_SCENES.START_CUTSCENE)
 	#Global.set_scene(Global.SCENES.CUTSCENE)
 	
 func quit_game():

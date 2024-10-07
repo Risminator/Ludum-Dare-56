@@ -33,14 +33,15 @@ enum STATES {
 }
 
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
+const START_CUTSCENE_PATH = "res://scenes/menus/cutscene.tscn"
+const MAP_PATH = "res://scenes/menus/map.tscn"
 const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
 const AXOLOTL_LEVEL_PATH = "res://scenes/levels/axolotl_level.tscn"
 const MIMIC_LEVEL_PATH = "res://scenes/levels/mimic_level.tscn"
 const GOOSE_LEVEL_PATH = "res://scenes/levels/goose_level.tscn"
 const TURTLE_LEVEL_PATH = "res://scenes/levels/turtle_level.tscn"
 const HAMSTER_LEVEL_PATH = "res://scenes/levels/hamster_level.tscn"
-const MAP_PATH = "res://scenes/menus/map.tscn"
-
+const ENDING_PATH = "res://scenes/menus/ending.tscn"
 
 var BEATEN_LEVELS = {
 	GAME_SCENES.RABBIT_LEVEL: false,
@@ -51,7 +52,7 @@ var BEATEN_LEVELS = {
 	GAME_SCENES.HAMSTER_LEVEL: false
 }
 
-var monsters_count: int = 1
+var monsters_count: int = 6
 var visited_monsters_count: int = 0
 
 var SoundEffectsVolume = 0

@@ -8,4 +8,6 @@ func _ready() -> void:
 	Events.satisfied_animal.connect(_on_satisfied_animal)
 	
 func _on_satisfied_animal() -> void:
-	Global.BEATEN_LEVELS[Global.GAME_SCENES.TURTLE_LEVEL] = true
+	if Global.BEATEN_LEVELS[Global.GAME_SCENES.TURTLE_LEVEL] != true:
+		Global.BEATEN_LEVELS[Global.GAME_SCENES.TURTLE_LEVEL] = true
+		Global.visited_monsters_count += 1

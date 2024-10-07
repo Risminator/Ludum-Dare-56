@@ -41,7 +41,10 @@ func _on_can_return_to_map() -> void:
 	%ReturnToMapBtn.disabled = false
 
 func _on_return_to_map_btn_pressed() -> void:
-	SceneChanger.change_to(Global.GAME_SCENES.MAP)
+	if Global.visited_monsters_count < Global.monsters_count:
+		SceneChanger.change_to(Global.GAME_SCENES.MAP)
+	else:
+		SceneChanger.change_to(Global.GAME_SCENES.ENDING)
 
 
 func _on_restart_btn_pressed() -> void:
