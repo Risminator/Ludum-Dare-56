@@ -3,3 +3,4 @@
 /android/
 /_debug/
 .DS_Store
+/addons/godot-git-plugin/
