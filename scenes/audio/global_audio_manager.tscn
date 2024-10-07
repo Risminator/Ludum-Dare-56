@@ -44,6 +44,42 @@ Vector2i(2, 2): {
 Vector2i(2, 3): {
 "fade_beats": 0,
 "fade_mode": 0,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(3, 2): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(3, 3): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(4, 4): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(4, 5): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(5, 4): {
+"fade_beats": 1,
+"fade_mode": 0,
+"from_time": 2,
+"to_time": 0
+},
+Vector2i(5, 5): {
+"fade_beats": 1,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 }
