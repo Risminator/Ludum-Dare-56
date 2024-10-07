@@ -9,7 +9,6 @@ class_name Hand
 
 var is_controllable: bool = false
 var rng = RandomNumberGenerator.new()
-#signal changed_food
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -24,8 +23,6 @@ func _ready() -> void:
 	animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
 	Events.game_start.connect(_on_game_start)
 	Events.satisfied_animal.connect(_on_satisfied)
-	#changed_food.connect(_on_changed_food)
-	#Events.chomp_successful.connect(_on_chomp_successful)
 	
 
 func _physics_process(_delta: float) -> void:
@@ -53,14 +50,6 @@ func _physics_process(_delta: float) -> void:
 				animal.gpu_particles_2d.amount = 8
 			else:
 				animal.gpu_particles_2d.amount = 2
-		
-		#if animal != null and is_animal_satisfied:
-			#if get_slide_collision_count() > 0:
-				#if animal.gpu_particles_2d != null:
-					#animal.gpu_particles_2d.amount = 8
-			#else:
-				#if animal.gpu_particles_2d != null:
-					#animal.gpu_particles_2d.amount = 2
 			
 		if position.x < min_x:
 			position.x = min_x
@@ -106,9 +95,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			animal.modulate = Color.DARK_OLIVE_GREEN
 			animal.flee()
 
-#func _on_changed_food() -> void:
-	#animation_player.stop()
-	#animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
 func is_food_correct() -> bool:
 	if animal is Rabbit and food != Global.FOOD.CARROT:
 		return false
