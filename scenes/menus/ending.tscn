@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://b2q6tjaycy1b0"]
 
 [ext_resource type="Script" path="res://scripts/menus/ending.gd" id="1_cu7md"]
-[ext_resource type="Texture2D" uid="uid://cv0wudi2eawwd" path="res://assets/cutscene begining/beg1.png" id="2_tluhf"]
+[ext_resource type="Texture2D" uid="uid://bc3hbihtmbvi3" path="res://assets/UI/meow meow.png" id="2_h5xbm"]
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="3_kny1y"]
 [ext_resource type="FontFile" uid="uid://d4g1cp4nnnshb" path="res://assets/fonts/Test Font.ttf" id="4_xbyyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r4kl3"]
-atlas = ExtResource("2_tluhf")
+atlas = ExtResource("2_h5xbm")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="Animation" id="Animation_gvdbl"]
@@ -136,9 +136,11 @@ anchor_right = 1.0
 offset_left = -167.0
 offset_bottom = 23.0
 grow_horizontal = 0
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("4_xbyyv")
 theme_override_font_sizes/font_size = 40
-text = "(LMB to continue)"
+text = "Thanks for playing!
+LMB to return to Main Menu"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

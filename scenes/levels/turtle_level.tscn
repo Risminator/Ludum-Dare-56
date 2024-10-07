@@ -10,7 +10,11 @@
 texture = ExtResource("2_lj3mt")
 
 [node name="Turtle" parent="Playerground" index="0" instance=ExtResource("2_7ovx2")]
-position = Vector2(-360, 0)
+position = Vector2(-357, 134)
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
 animal = NodePath("../Turtle")
+
+[node name="LabelContainer" parent="UI" index="0"]
+offset_top = -260.0
+offset_bottom = 140.0

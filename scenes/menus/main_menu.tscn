@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctwjh38ge7atb"]
+[gd_scene load_steps=10 format=3 uid="uid://ctwjh38ge7atb"]
 
 [ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_hlahm"]
 [ext_resource type="PackedScene" uid="uid://bd7b1sxnvl2mb" path="res://scenes/menus/pause_menu.tscn" id="2_i4eg1"]
@@ -8,6 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://bineearsmv4jn" path="res://resources/UI/button_normal.tres" id="5_po8r0"]
 [ext_resource type="StyleBox" uid="uid://c036q7lldrr7h" path="res://resources/UI/button_pressed.tres" id="6_8ettp"]
 [ext_resource type="StyleBox" uid="uid://b3cr6s2av68ol" path="res://resources/UI/button_hover.tres" id="7_76k03"]
+[ext_resource type="Texture2D" uid="uid://i2rgw4y03nte" path="res://assets/UI/logo.png" id="9_gimno"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -38,9 +39,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -10.0
+offset_top = 41.0
 offset_right = 200.0
-offset_bottom = 255.0
+offset_bottom = 306.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -64,6 +65,7 @@ theme_override_styles/normal = ExtResource("5_po8r0")
 text = "Start Game"
 
 [node name="OptionsBtn" type="Button" parent="VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(400, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_kwoif")
@@ -102,6 +104,18 @@ text = "Exit Game"
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(640, 360)
 script = ExtResource("4_6nu42")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -285.5
+offset_top = 31.0
+offset_right = 285.5
+offset_bottom = 251.0
+grow_horizontal = 2
+texture = ExtResource("9_gimno")
 
 [connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bvu1awwe7aehc"]
 
 [ext_resource type="Script" path="res://scripts/menus/cutscene.gd" id="1_qoqep"]
-[ext_resource type="Texture2D" uid="uid://cv0wudi2eawwd" path="res://assets/cutscene begining/beg1.png" id="2_fjebw"]
+[ext_resource type="Texture2D" uid="uid://cj1cay12xq0sa" path="res://assets/UI/bg_sheet.png" id="2_0s6o1"]
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="3_473mt"]
 [ext_resource type="FontFile" uid="uid://d4g1cp4nnnshb" path="res://assets/fonts/Test Font.ttf" id="4_qs7p1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r4kl3"]
-atlas = ExtResource("2_fjebw")
+atlas = ExtResource("2_0s6o1")
 region = Rect2(0, 0, 1280, 720)
 
 [sub_resource type="Animation" id="Animation_gvdbl"]
@@ -22,36 +22,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_e2041"]
-resource_name = "fade_transition"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.233333, 0.366667, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"next_frame"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_a5wu5"]
@@ -81,6 +51,36 @@ tracks/1/keys = {
 "values": [{
 "args": [],
 "method": &"previous_frame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_e2041"]
+resource_name = "fade_transition"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.366667, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"next_frame"
 }]
 }
 
@@ -136,9 +136,10 @@ anchor_right = 1.0
 offset_left = -167.0
 offset_bottom = 23.0
 grow_horizontal = 0
+theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("4_qs7p1")
 theme_override_font_sizes/font_size = 40
-text = "(LMB to continue)"
+text = "LMB to continue"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
