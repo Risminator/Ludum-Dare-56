@@ -53,38 +53,38 @@ Vector2i(-1, -1): {
 "to_time": 0
 },
 Vector2i(-1, 8): {
-"fade_beats": 8,
+"fade_beats": 2,
 "fade_mode": 3,
 "from_time": 2,
 "to_time": 0
 },
 Vector2i(-1, 9): {
-"fade_beats": 8,
+"fade_beats": 2,
 "fade_mode": 3,
 "from_time": 2,
 "to_time": 0
 },
 Vector2i(0, 8): {
 "fade_beats": 4,
-"fade_mode": 2,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 },
 Vector2i(0, 9): {
 "fade_beats": 4,
-"fade_mode": 2,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 },
 Vector2i(1, 8): {
 "fade_beats": 4,
-"fade_mode": 2,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 },
 Vector2i(1, 9): {
 "fade_beats": 4,
-"fade_mode": 2,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 },
