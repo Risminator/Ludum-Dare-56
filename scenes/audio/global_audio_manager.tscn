@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw5qcpq2e2y35"]
+[gd_scene load_steps=10 format=3 uid="uid://bw5qcpq2e2y35"]
 
 [ext_resource type="AudioStream" uid="uid://wckubdyy6caa" path="res://assets/sounds/music/menu/menu_melody.ogg" id="1_3bvhx"]
 [ext_resource type="Script" path="res://scripts/global_audio_manager.gd" id="1_mad6m"]
@@ -7,9 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://la5och1l4hbb" path="res://assets/sounds/music/mountain_layers/mountains_var.ogg" id="4_ujmyo"]
 [ext_resource type="AudioStream" uid="uid://dgkeyx771lnjf" path="res://assets/sounds/music/river_layers/river_base.ogg" id="5_2pupj"]
 [ext_resource type="AudioStream" uid="uid://cl2665vhaamif" path="res://assets/sounds/music/river_layers/river_var.ogg" id="6_u8pyq"]
+[ext_resource type="AudioStream" uid="uid://1ir81vxg1wfm" path="res://assets/sounds/music/all/all_var.ogg" id="7_kpm36"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_tqtam"]
-clip_count = 6
+clip_count = 8
 clip_0/name = &"Menu Melody"
 clip_0/stream = ExtResource("1_3bvhx")
 clip_0/auto_advance = 0
@@ -28,6 +29,12 @@ clip_4/auto_advance = 0
 clip_5/name = &"River Var"
 clip_5/stream = ExtResource("6_u8pyq")
 clip_5/auto_advance = 0
+clip_6/name = &"All Base"
+clip_6/stream = ExtResource("7_kpm36")
+clip_6/auto_advance = 0
+clip_7/name = &"All Var"
+clip_7/stream = ExtResource("7_kpm36")
+clip_7/auto_advance = 0
 _transitions = {
 Vector2i(-1, -1): {
 "fade_beats": 1,
