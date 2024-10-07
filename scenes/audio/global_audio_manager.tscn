@@ -1,83 +1,56 @@
-[gd_scene load_steps=21 format=3 uid="uid://bw5qcpq2e2y35"]
+[gd_scene load_steps=9 format=3 uid="uid://bw5qcpq2e2y35"]
 
-[ext_resource type="AudioStream" uid="uid://do2ait4sxqwep" path="res://assets/sounds/music/mountain_layers/mountain_melody.ogg" id="1_0ndxw"]
 [ext_resource type="AudioStream" uid="uid://wckubdyy6caa" path="res://assets/sounds/music/menu/menu_melody.ogg" id="1_3bvhx"]
 [ext_resource type="Script" path="res://scripts/global_audio_manager.gd" id="1_mad6m"]
-[ext_resource type="AudioStream" uid="uid://bq0hh037xuulp" path="res://assets/sounds/music/mountain_layers/mountain_melody_var.ogg" id="2_6cfuu"]
 [ext_resource type="AudioStream" uid="uid://c3xiwee3q1rmo" path="res://assets/sounds/music/menu/menu_melody_var.ogg" id="2_tytvr"]
-[ext_resource type="AudioStream" uid="uid://b75y7vogjvsnu" path="res://assets/sounds/music/mountain_layers/mountain_chords_synth.ogg" id="5_km085"]
-[ext_resource type="AudioStream" uid="uid://co0p5r3ibv7jf" path="res://assets/sounds/music/mountain_layers/mountain_percusion.ogg" id="6_x7ara"]
-[ext_resource type="AudioStream" uid="uid://cy7gy4f2kxxe8" path="res://assets/sounds/music/mountain_layers/mountain_sub.ogg" id="7_xsqii"]
-[ext_resource type="AudioStream" uid="uid://b318eh3w7oaan" path="res://assets/sounds/music/river_layers/river_melody_fluet.ogg" id="8_36lxg"]
-[ext_resource type="AudioStream" uid="uid://db2bngmnf8p38" path="res://assets/sounds/music/river_layers/river_melody_var_fluet.ogg" id="9_lxu6k"]
-[ext_resource type="AudioStream" uid="uid://bh5qedcwasgih" path="res://assets/sounds/music/river_layers/river_chords_celeste.ogg" id="10_vdtep"]
-[ext_resource type="AudioStream" uid="uid://bq1pdd81mexwt" path="res://assets/sounds/music/river_layers/river_bass.ogg" id="11_g7rk2"]
-[ext_resource type="AudioStream" uid="uid://bbgkof62ona5i" path="res://assets/sounds/music/river_layers/river_chords_strings.ogg" id="12_jbffv"]
-[ext_resource type="AudioStream" uid="uid://cgtf5i44pr1ct" path="res://assets/sounds/music/river_layers/river_percusion.ogg" id="13_eung7"]
+[ext_resource type="AudioStream" uid="uid://mbgefkquf8d7" path="res://assets/sounds/music/mountain_layers/mountains_base.ogg" id="3_1vlmy"]
+[ext_resource type="AudioStream" uid="uid://la5och1l4hbb" path="res://assets/sounds/music/mountain_layers/mountains_var.ogg" id="4_ujmyo"]
+[ext_resource type="AudioStream" uid="uid://dgkeyx771lnjf" path="res://assets/sounds/music/river_layers/river_base.ogg" id="5_2pupj"]
+[ext_resource type="AudioStream" uid="uid://cl2665vhaamif" path="res://assets/sounds/music/river_layers/river_var.ogg" id="6_u8pyq"]
 
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_c1lc0"]
-clip_count = 2
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_tqtam"]
+clip_count = 6
 clip_0/name = &"Menu Melody"
 clip_0/stream = ExtResource("1_3bvhx")
 clip_0/auto_advance = 0
 clip_1/name = &"Menu Melody Var"
 clip_1/stream = ExtResource("2_tytvr")
 clip_1/auto_advance = 0
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_v1p44"]
-clip_count = 2
-clip_0/name = &"Mountain Melody"
-clip_0/stream = ExtResource("1_0ndxw")
-clip_0/auto_advance = 0
-clip_1/name = &"Mountain Melody Var"
-clip_1/stream = ExtResource("2_6cfuu")
-clip_1/auto_advance = 0
-
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_wkcyf"]
-stream_count = 4
-stream_0/stream = SubResource("AudioStreamInteractive_v1p44")
-stream_0/volume = 0.0
-stream_1/stream = ExtResource("5_km085")
-stream_1/volume = 0.0
-stream_2/stream = ExtResource("6_x7ara")
-stream_2/volume = 0.0
-stream_3/stream = ExtResource("7_xsqii")
-stream_3/volume = 0.0
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_egm2q"]
-clip_count = 2
-clip_0/name = &"River Melody Fluet"
-clip_0/stream = ExtResource("8_36lxg")
-clip_0/auto_advance = 0
-clip_1/name = &"River Melody Var Fluet"
-clip_1/stream = ExtResource("9_lxu6k")
-clip_1/auto_advance = 0
-
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_oteli"]
-stream_count = 5
-stream_0/stream = SubResource("AudioStreamInteractive_egm2q")
-stream_0/volume = 0.0
-stream_1/stream = ExtResource("10_vdtep")
-stream_1/volume = 0.0
-stream_2/stream = ExtResource("11_g7rk2")
-stream_2/volume = 0.0
-stream_3/stream = ExtResource("12_jbffv")
-stream_3/volume = 0.0
-stream_4/stream = ExtResource("13_eung7")
-stream_4/volume = 0.0
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_tqtam"]
-clip_count = 3
-clip_0/name = &"menu"
-clip_0/stream = SubResource("AudioStreamInteractive_c1lc0")
-clip_0/auto_advance = 0
-clip_1/name = &"mountains"
-clip_1/stream = SubResource("AudioStreamSynchronized_wkcyf")
-clip_1/auto_advance = 0
-clip_2/name = &"river"
-clip_2/stream = SubResource("AudioStreamSynchronized_oteli")
+clip_2/name = &"Mountains Base"
+clip_2/stream = ExtResource("3_1vlmy")
 clip_2/auto_advance = 0
+clip_3/name = &"Mountains Var"
+clip_3/stream = ExtResource("4_ujmyo")
+clip_3/auto_advance = 0
+clip_4/name = &"River Base"
+clip_4/stream = ExtResource("5_2pupj")
+clip_4/auto_advance = 0
+clip_5/name = &"River Var"
+clip_5/stream = ExtResource("6_u8pyq")
+clip_5/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 1,
+"fade_mode": 3,
+"from_time": 1,
+"to_time": 0
+},
+Vector2i(2, 2): {
+"fade_beats": 0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(2, 3): {
+"fade_beats": 0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+}
+}
 
 [node name="GlobalAudioManager" type="AudioStreamPlayer2D"]
+process_mode = 3
 stream = SubResource("AudioStreamInteractive_tqtam")
+autoplay = true
 script = ExtResource("1_mad6m")
