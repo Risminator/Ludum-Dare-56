@@ -36,6 +36,9 @@ libraries = {
 }
 autoplay = "rabbit_anims/RESET"
 
+[node name="CalmTimer" parent="." index="2"]
+wait_time = 2.0
+
 [node name="Frightened" parent="StateMachine" index="0"]
 animation_name = "rabbit_anims/frightened"
 

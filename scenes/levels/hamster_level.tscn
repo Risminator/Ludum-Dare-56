@@ -10,7 +10,7 @@
 texture = ExtResource("3_qapn7")
 
 [node name="Hamster" parent="Playerground" index="0" instance=ExtResource("2_67eix")]
-position = Vector2(-360, 0)
+position = Vector2(-388, 137)
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
 animal = NodePath("../Hamster")

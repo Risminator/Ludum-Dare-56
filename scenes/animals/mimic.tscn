@@ -355,6 +355,12 @@ libraries = {
 "mimic_anims": ExtResource("4_dfbi3")
 }
 
+[node name="CalmTimer" parent="." index="2"]
+wait_time = 0.5
+
+[node name="ChompTImer" parent="." index="4"]
+wait_time = 0.6
+
 [node name="Frightened" parent="StateMachine" index="0"]
 animation_name = "mimic_anims/frightened"
 
@@ -378,7 +384,6 @@ position = Vector2(-54, 61)
 polygon = PackedVector2Array(185, -109, 73, -8, 23, 43, 197, 152, 219, 50, 214, -37)
 
 [node name="PhysicalCollider" parent="." index="9"]
-visible = false
 polygon = PackedVector2Array(137, -99, 141, 210, 70, 247, -48, 248, -142, 218, -131, 93, -144, -96, -120, -133, -121, -205, -42, -220, 55, -216, 119, -198, 119, -136)
 
 [node name="GPUParticles2D" parent="." index="10"]

@@ -109,6 +109,8 @@ func is_food_correct() -> bool:
 		return false
 	if animal is Goose and food != Global.FOOD.MEAT:
 		return false
+	if animal is Hamster and food != Global.FOOD.BERRIES:
+		return false
 	return true
 
 func _on_satisfied() -> void:

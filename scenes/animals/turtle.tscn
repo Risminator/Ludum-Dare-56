@@ -356,6 +356,12 @@ libraries = {
 "turtle_anims": ExtResource("4_2r4lu")
 }
 
+[node name="OpenTimer" parent="." index="3"]
+wait_time = 1.0
+
+[node name="ChompTImer" parent="." index="4"]
+wait_time = 0.5
+
 [node name="Frightened" parent="StateMachine" index="0"]
 animation_name = "turtle_anims/frightened"
 
@@ -378,5 +384,4 @@ animation_name = "turtle_anims/flee"
 polygon = PackedVector2Array(239, -17, 200, 10, 182, 59, 214, 72, 260, 69, 288, 47, 281, 7)
 
 [node name="PhysicalCollider" parent="." index="9"]
-visible = false
 polygon = PackedVector2Array(34, -50, 105, -19, 114, 15, 167, -14, 214, 5, 218, 40, 188, 70, 130, 61, 97, 86, 116, 127, 93, 143, 66, 107, -20, 138, -33, 181, -74, 181, -73, 135, -151, 127, -190, 159, -226, 163, -215, 113, -198, 94, -219, 57, -216, 17, -150, -40, -52, -70)

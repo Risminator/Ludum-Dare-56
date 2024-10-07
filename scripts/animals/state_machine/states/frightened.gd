@@ -10,6 +10,7 @@ var is_calm = false
 
 func enter() -> void:
 	super()
+	Events.screen_shake.emit(3)
 	calm_timer = parent.calm_timer
 	flee_counter = 0
 	is_calm = false
