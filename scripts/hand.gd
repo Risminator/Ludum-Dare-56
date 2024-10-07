@@ -95,12 +95,15 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			print($Sprite2D.frame)
 		else:
 			animal.modulate = Color.DARK_OLIVE_GREEN
+			animal.angry_gpu_particles_2d.emitting = true
 			animal.flee()
 
 func is_food_correct() -> bool:
 	if animal is Rabbit and food != Global.FOOD.CARROT:
 		return false
 	if animal is Axolotl and food != Global.FOOD.FISH:
+		return false
+	if animal is Mimic and food != Global.FOOD.APPLE:
 		return false
 	return true
 

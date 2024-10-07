@@ -383,3 +383,6 @@ polygon = PackedVector2Array(137, -99, 141, 210, 70, 247, -48, 248, -142, 218, -
 
 [node name="GPUParticles2D" parent="." index="10"]
 position = Vector2(-27, -202)
+
+[node name="AngryGPUParticles2D" parent="." index="11"]
+position = Vector2(-23, -177)

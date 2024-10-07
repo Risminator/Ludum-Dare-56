@@ -15,6 +15,7 @@ extends AnimatableBody2D
 @onready var physical_collider: CollisionPolygon2D = $PhysicalCollider
 
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
+@onready var angry_gpu_particles_2d: GPUParticles2D = $AngryGPUParticles2D
 
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,

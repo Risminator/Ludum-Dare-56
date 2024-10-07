@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://xbu57lkb77xa"]
+[gd_scene load_steps=22 format=3 uid="uid://xbu57lkb77xa"]
 
 [ext_resource type="Script" path="res://scripts/animals/state_machine/animal.gd" id="1_1sxch"]
 [ext_resource type="Texture2D" uid="uid://r3xl0phwtuud" path="res://assets/creatures/rabbit_sheet.png" id="2_j17p5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/satisfied.gd" id="8_c8hpr"]
 [ext_resource type="Script" path="res://scripts/animals/state_machine/states/fleeing.gd" id="10_1t8pc"]
 [ext_resource type="Texture2D" uid="uid://bymvjbvvp4yny" path="res://assets/UI/Hearts.png" id="10_cuvde"]
+[ext_resource type="Texture2D" uid="uid://cl3nosytxk34t" path="res://assets/UI/Angry lighting.png" id="11_s4pgr"]
 
 [sub_resource type="Animation" id="Animation_38stx"]
 length = 0.001
@@ -448,5 +449,14 @@ emitting = false
 amount = 2
 process_material = SubResource("ParticleProcessMaterial_3lxpd")
 texture = ExtResource("10_cuvde")
+
+[node name="AngryGPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = 2
+position = Vector2(70, -67)
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_3lxpd")
+texture = ExtResource("11_s4pgr")
+one_shot = true
 
 [connection signal="body_entered" from="FeedCollider2" to="." method="_on_feed_collider_2_body_entered"]
