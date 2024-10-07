@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btvx80erfhyin"
-path="res://.godot/imported/hand_sheet.png-109c988f00254c4254cbdb4cbb725e4c.ctex"
+uid="uid://d18gq0cit5gvo"
+path="res://.godot/imported/Axolotl.png-49fde5fe547e8964219209451be4bd10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/hand_sheet.png"
-dest_files=["res://.godot/imported/hand_sheet.png-109c988f00254c4254cbdb4cbb725e4c.ctex"]
+source_file="res://assets/creatures/Axolotl.png"
+dest_files=["res://.godot/imported/Axolotl.png-49fde5fe547e8964219209451be4bd10.ctex"]
 
 [params]
 
