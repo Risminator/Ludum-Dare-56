@@ -1,7 +1,387 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6u4xudis0imt"]
+[gd_scene load_steps=14 format=3 uid="uid://c6u4xudis0imt"]
 
 [ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_wolce"]
 [ext_resource type="Script" path="res://scripts/animals/goose.gd" id="2_gqae0"]
+[ext_resource type="Texture2D" uid="uid://urh8m8k70sju" path="res://assets/creatures/Goose.png" id="3_6k01j"]
+[ext_resource type="AnimationLibrary" uid="uid://btmmeiub2048x" path="res://resources/goose_anims.res" id="4_wyord"]
+
+[sub_resource type="Animation" id="Animation_38stx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rddwh"]
+resource_name = "chewing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(32, -86, 33, -41, 35, -7, 52, 96, 38, 122, 57, 169, 36, 179, 27, 136, 0, 147, -3, 188, -21, 195, -17, 156, -83, 167, -80, 191, -97, 197, -108, 164, -146, 136, -191, 154, -247, 149, -284, 120, -309, 76, -314, 32, -274, 53, -231, 66, -194, 71, -174, 83, -156, 104, -89, 94, -33, 63, -35, -29, -17, -47), PackedVector2Array(17, -60, 74, -101, 149, -51, 159, 12, 142, 56, 166, 104, 145, 206, 116, 250, 170, 305, 170, 305, -220, 227, -224, 58, 12, 34, -154, -27)]
+}
+
+[sub_resource type="Animation" id="Animation_nytu0"]
+resource_name = "chomp"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(32, -86, 33, -41, 35, -7, 52, 96, 38, 122, 57, 169, 36, 179, 27, 136, 0, 147, -3, 188, -21, 195, -17, 156, -83, 167, -80, 191, -97, 197, -108, 164, -146, 136, -191, 154, -247, 149, -284, 120, -309, 76, -314, 32, -274, 53, -231, 66, -194, 71, -174, 83, -156, 104, -89, 94, -33, 63, -35, -29, -17, -47)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t667i"]
+resource_name = "flee"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-400, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1w5cp"]
+resource_name = "frightened"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-51, -97, 35, -101, 90, -90, 118, -1, 100, 27, 72, 40, 0, 60, -27, 92, -18, 154, -32, 159, -41, 121, -68, 126, -72, 174, -91, 171, -86, 134, -151, 153, -144, 182, -169, 182, -180, 147, -216, 102, -267, 85, -285, 7, -222, -105, -220, -21, -190, 44, -196, 83, -128, 72, -92, 54, -101, -40, -75, -65)]
+}
+
+[sub_resource type="Animation" id="Animation_thdp5"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_s44qc"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(4, -92, 14, -50, 4, -5, 22, 82, 14, 122, 29, 170, 8, 182, 1, 139, -27, 148, -31, 192, -52, 194, -45, 157, -106, 169, -102, 194, -125, 200, -133, 167, -165, 144, -188, 124, -235, 128, -262, 117, -292, 62, -291, -54, -269, -6, -226, 32, -193, 46, -182, 95, -119, 93, -56, 66, -54, -33, -35, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_w67g4"]
+resource_name = "satisfied"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TouchCollider/TouchPolygon:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 59, 33, 73, 12, 114, 29, 163, 8, 175, 2, 130, -25, 142, -27, 185, -52, 189, -44, 153, -109, 165, -102, 186, -125, 194, -136, 163, -188, 120, -236, 124, -297, 50, -295, -60, -245, 23, -216, 37, -197, 60, -174, 97, -119, 93, -58, 68, -75, -28, -51, -49)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FeedCollider2/FeedPolygon2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7on56"]
+_data = {
+"RESET": SubResource("Animation_38stx"),
+"chewing": SubResource("Animation_rddwh"),
+"chomp": SubResource("Animation_nytu0"),
+"flee": SubResource("Animation_t667i"),
+"frightened": SubResource("Animation_1w5cp"),
+"idle": SubResource("Animation_thdp5"),
+"open": SubResource("Animation_s44qc"),
+"satisfied": SubResource("Animation_w67g4")
+}
 
 [node name="Goose" instance=ExtResource("1_wolce")]
 script = ExtResource("2_gqae0")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_6k01j")
+
+[node name="Animations" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_7on56"),
+"goose_anims": ExtResource("4_wyord")
+}
+
+[node name="Frightened" parent="StateMachine" index="0"]
+animation_name = "goose_anims/frightened"
+
+[node name="Idle" parent="StateMachine" index="1"]
+animation_name = "goose_anims/idle"
+
+[node name="Open" parent="StateMachine" index="2"]
+animation_name = "goose_anims/open"
+
+[node name="Chomp" parent="StateMachine" index="3"]
+animation_name = "goose_anims/chomp"
+
+[node name="Satisfied" parent="StateMachine" index="4"]
+animation_name = "goose_anims/satisfied"
+
+[node name="Flee" parent="StateMachine" index="5"]
+animation_name = "goose_anims/flee"
+
+[node name="FeedPolygon2" parent="FeedCollider2" index="0"]
+polygon = PackedVector2Array(235, -208, 107, -231, 88, -118, 169, -101, 254, -88, 253, -187)
+
+[node name="PhysicalCollider" parent="." index="9"]
+visible = false
+polygon = PackedVector2Array(-20, -187, 58, -235, 96, -268, 138, -259, 175, -213, 115, -196, 52, -198, 7, -149, 17, -52, 23, 48, -20, 121, -103, 171, -134, 205, -131, 250, -91, 254, -109, 277, -145, 296, -177, 283, -189, 205, -227, 151, -281, 151, -259, 107, -183, 30, -91, 3, -140, -213, -106, -261, -82, -258, -60, -230, -67, -198, -76, -156, -64, -66, -36, -63)
+
+[node name="GPUParticles2D" parent="." index="10"]
+position = Vector2(4, -145)
+
+[node name="AngryGPUParticles2D" parent="." index="11"]
+position = Vector2(14, -154)
