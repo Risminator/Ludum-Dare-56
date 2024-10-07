@@ -6,6 +6,7 @@ extends StaticBody2D
 @onready var calm_timer: Timer = $CalmTimer
 @onready var chomp_timer: Timer = $ChompTImer
 @onready var cooldown_timer: Timer = $CooldownTimer
+@onready var open_timer: Timer = $OpenTimer
 
 @onready var touch_collider: Area2D = $TouchCollider
 @onready var touch_polygon: CollisionPolygon2D = $TouchCollider/TouchPolygon
@@ -32,3 +33,4 @@ func _process(delta: float) -> void:
 	
 func flee():
 	animations.play("flee")
+	Events.game_lose.emit()

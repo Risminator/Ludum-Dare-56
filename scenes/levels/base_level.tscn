@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cjmkpeb4lfaf4"]
+[gd_scene load_steps=63 format=3 uid="uid://cjmkpeb4lfaf4"]
 
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="1_4v8we"]
 [ext_resource type="PackedScene" uid="uid://cy57oxfnuh257" path="res://scenes/hand.tscn" id="1_5g20p"]
@@ -14,10 +14,19 @@
 [ext_resource type="AudioStream" uid="uid://c1ytm5ibjt1tm" path="res://assets/sounds/music/mountain_layers/mountain_chords_synth.wav" id="9_k8yap"]
 [ext_resource type="AudioStream" uid="uid://bot18q0drdlik" path="res://assets/sounds/music/mountain_layers/mountain_melody_synth.wav" id="10_w6u34"]
 [ext_resource type="AudioStream" uid="uid://boc3b0dyrnm4c" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_synth.wav" id="11_e8qec"]
+[ext_resource type="Texture2D" uid="uid://bah5mgdk2afgv" path="res://assets/UI/Button_basic.png" id="12_2d00k"]
+[ext_resource type="Texture2D" uid="uid://c2c78u8oae482" path="res://assets/UI/Icon_food_Fish.png" id="12_4pqpy"]
 [ext_resource type="AudioStream" uid="uid://b55jyhd6qojdj" path="res://assets/sounds/music/mountain_layers/mountain_melody_var_vocal.wav" id="12_ndra6"]
 [ext_resource type="AudioStream" uid="uid://d3w6bg2xfnmqc" path="res://assets/sounds/music/mountain_layers/mountain_melody_vocal.wav" id="13_66pi5"]
+[ext_resource type="Texture2D" uid="uid://dty6nuc1o4o1a" path="res://assets/UI/Icon_food_Mandragora.png" id="13_tjw4f"]
+[ext_resource type="Texture2D" uid="uid://mt2sf5jv6ndb" path="res://assets/UI/rightarrow.png" id="13_xfw0p"]
 [ext_resource type="AudioStream" uid="uid://bnlmaiv5i5jvj" path="res://assets/sounds/music/mountain_layers/mountain_percusion.wav" id="14_b8mkp"]
+[ext_resource type="Texture2D" uid="uid://b8ptl3216m772" path="res://assets/UI/Icon_food_eyepple.png" id="14_jtaoi"]
+[ext_resource type="Texture2D" uid="uid://bixw3yvgfp3bm" path="res://assets/UI/leftarrow.png" id="14_lppql"]
 [ext_resource type="AudioStream" uid="uid://cw8x72ws0rqxk" path="res://assets/sounds/music/mountain_layers/mountain_sub.wav" id="15_asdmd"]
+[ext_resource type="Script" path="res://scripts/menus/tip.gd" id="15_jpu6q"]
+[ext_resource type="Texture2D" uid="uid://pec30085yaq0" path="res://assets/UI/Icon_food_dragonmeat.png" id="15_wpes3"]
+[ext_resource type="Texture2D" uid="uid://jnuaunskhvi" path="res://assets/UI/Icon_food_firecarrot.png" id="16_gmrhm"]
 
 [sub_resource type="Animation" id="Animation_7mdp0"]
 resource_name = "AppearDisappear"
@@ -110,6 +119,52 @@ texture = ExtResource("7_6g6gv")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gfpd"]
 texture = ExtResource("8_2yaim")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4lxsf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wx828"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jblcw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrqhw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qito0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfkai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8l7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27j3s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lun8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rkgjm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7g2l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4siey"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm30j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3tdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bdkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aagb3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyih1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ei4wk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pw5ox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oclmk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhb5r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vp4bj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6xnv"]
+
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_mami6"]
 stream_count = 7
 stream_0/stream = ExtResource("9_k8yap")
@@ -190,9 +245,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -400.0
-offset_top = -200.0
+offset_top = -260.0
 offset_right = 400.0
-offset_bottom = 200.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -271,6 +326,121 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_wjsoj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5gfpd")
 disabled = true
 
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.76875
+anchor_top = 0.829167
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_constants/separation = -1
+metadata/_edit_use_anchors_ = true
+
+[node name="Notepad" type="TextureRect" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("12_2d00k")
+
+[node name="RightBtn" type="Button" parent="UI/VBoxContainer/Notepad"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4lxsf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wx828")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jblcw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_qrqhw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qito0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bfkai")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v8l7j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_27j3s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lun8f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rkgjm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n7g2l")
+icon = ExtResource("13_xfw0p")
+expand_icon = true
+
+[node name="LeftBtn" type="Button" parent="UI/VBoxContainer/Notepad"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -17.5
+offset_right = 35.0
+offset_bottom = 17.5
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4siey")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tm30j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h3tdd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_8bdkn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aagb3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_wyih1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ei4wk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_pw5ox")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_oclmk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fhb5r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vp4bj")
+icon = ExtResource("14_lppql")
+expand_icon = true
+
+[node name="Tip" type="TextureRect" parent="UI/VBoxContainer/Notepad"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_u6xnv")
+script = ExtResource("15_jpu6q")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = -1
+
+[node name="1Carrot" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("16_gmrhm")
+expand_mode = 2
+
+[node name="2Meat" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("15_wpes3")
+expand_mode = 2
+
+[node name="3Apple" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("14_jtaoi")
+expand_mode = 2
+
+[node name="4Mandrake" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("13_tjw4f")
+expand_mode = 2
+
+[node name="5Fish" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("12_4pqpy")
+expand_mode = 2
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = SubResource("AudioStreamSynchronized_mami6")
@@ -282,3 +452,5 @@ stream = SubResource("AudioStreamInteractive_rofdm")
 [connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="pressed" from="UI/HBoxContainer/RestartBtn" to="." method="_on_restart_btn_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/ReturnToMapBtn" to="." method="_on_return_to_map_btn_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Notepad/RightBtn" to="UI/VBoxContainer/Notepad/Tip" method="_on_right_btn_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Notepad/LeftBtn" to="UI/VBoxContainer/Notepad/Tip" method="_on_left_btn_pressed"]

@@ -14,12 +14,8 @@ func _ready() -> void:
 	get_tree().paused = true
 	Events.transition_complete.connect(_on_transition_complete)
 	audio_stream_player_2d.play()
+	Events.game_lose.connect(_on_can_return_to_map)
 	Events.satisfied_animal.connect(_on_can_return_to_map)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_start_timer_timeout() -> void:

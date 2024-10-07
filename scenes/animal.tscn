@@ -76,14 +76,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath(".:position")
+tracks/5/path = NodePath("Sprite2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-360, 0)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_rddwh"]
@@ -327,14 +327,14 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath(".:position")
+tracks/3/path = NodePath("Sprite2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-360, 0), Vector2(-600, 0)]
+"values": [Vector2(0, 0), Vector2(-400, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7on56"]
@@ -357,7 +357,6 @@ initial_velocity_max = 203.12
 gravity = Vector3(0, 98, 0)
 
 [node name="Animal" type="StaticBody2D"]
-position = Vector2(-360, 0)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_1sxch")
@@ -378,6 +377,7 @@ wait_time = 2.5
 one_shot = true
 
 [node name="OpenTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="ChompTImer" type="Timer" parent="."]
 wait_time = 0.2
@@ -446,6 +446,6 @@ disabled = true
 z_index = 2
 position = Vector2(68, -67)
 emitting = false
-amount = 4
+amount = 2
 process_material = SubResource("ParticleProcessMaterial_3lxpd")
 texture = ExtResource("10_cuvde")

@@ -6,13 +6,22 @@ enum GAME_SCENES {
 	MAP
 }
 
+enum FOOD {
+	UNDEFINED,
+	CARROT,
+	MEAT,
+	APPLE,
+	MANDRAKE,
+	FISH
+}
+
 const MAIN_MENU_PATH = "res://scenes/menus/main_menu.tscn"
 const RABBIT_LEVEL_PATH = "res://scenes/levels/rabbit_level.tscn"
 const MAP_PATH = "res://scenes/menus/map.tscn"
 
-#const SCENES = {
-	#MAIN = "menus/main_menu",
-#}
+
+var monsters_count: int = 1
+var visited_monsters_count: int = 0
 
 var SoundEffectsVolume = 0
 var MusicVolume = 0

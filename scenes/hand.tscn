@@ -3,6 +3,84 @@
 [ext_resource type="Script" path="res://scripts/hand.gd" id="1_xynge"]
 [ext_resource type="Texture2D" uid="uid://cfr1q3s5082yo" path="res://assets/hand/hand_sheet.png" id="2_3atit"]
 
+[sub_resource type="Animation" id="Animation_7yqrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HandCollision:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(598, -310, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 605, -108)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/FoodCollision:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)]
+}
+
+[sub_resource type="Animation" id="Animation_wpqsn"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HandCollision:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array()]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/FoodCollision:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array()]
+}
+
 [sub_resource type="Animation" id="Animation_3kurs"]
 resource_name = "0hp"
 tracks/0/type = "value"
@@ -123,90 +201,12 @@ tracks/1/keys = {
 "values": [PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)]
 }
 
-[sub_resource type="Animation" id="Animation_7yqrr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [8]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HandCollision:polygon")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(598, -310, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 605, -108)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/FoodCollision:polygon")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)]
-}
-
-[sub_resource type="Animation" id="Animation_wpqsn"]
-resource_name = "hurt"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HandCollision:polygon")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array()]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/FoodCollision:polygon")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array()]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k48wp"]
 _data = {
-"0 hp": SubResource("Animation_3kurs"),
-"1 hp": SubResource("Animation_a1jto"),
-"2 hp": SubResource("Animation_qc43e"),
-"3 hp": SubResource("Animation_wq82b"),
+"1 0 hp": SubResource("Animation_3kurs"),
+"1 1 hp": SubResource("Animation_a1jto"),
+"1 2 hp": SubResource("Animation_qc43e"),
+"1 3 hp": SubResource("Animation_wq82b"),
 "RESET": SubResource("Animation_7yqrr"),
 "hurt": SubResource("Animation_wpqsn")
 }
