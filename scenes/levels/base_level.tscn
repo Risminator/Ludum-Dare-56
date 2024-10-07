@@ -1,9 +1,8 @@
-[gd_scene load_steps=54 format=3 uid="uid://cjmkpeb4lfaf4"]
+[gd_scene load_steps=55 format=3 uid="uid://cjmkpeb4lfaf4"]
 
 [ext_resource type="Script" path="res://scripts/screen_shake.gd" id="1_4v8we"]
 [ext_resource type="PackedScene" uid="uid://cy57oxfnuh257" path="res://scenes/hand.tscn" id="1_5g20p"]
 [ext_resource type="Script" path="res://scripts/base_level.gd" id="1_i3k5c"]
-[ext_resource type="PackedScene" uid="uid://bd7b1sxnvl2mb" path="res://scenes/menus/pause_menu.tscn" id="2_5i0uf"]
 [ext_resource type="FontFile" uid="uid://d4g1cp4nnnshb" path="res://assets/fonts/Test Font.ttf" id="5_wdl50"]
 [ext_resource type="StyleBox" uid="uid://b3cr6s2av68ol" path="res://resources/UI/button_hover.tres" id="6_2f0ut"]
 [ext_resource type="Texture2D" uid="uid://dd7ubahldr8dc" path="res://assets/UI/Button_map_hover.png" id="6_davks"]
@@ -11,15 +10,17 @@
 [ext_resource type="StyleBox" uid="uid://c036q7lldrr7h" path="res://resources/UI/button_pressed.tres" id="7_hdnrq"]
 [ext_resource type="Texture2D" uid="uid://c4v3kbn71ql65" path="res://assets/UI/Button_map.png" id="8_2yaim"]
 [ext_resource type="StyleBox" uid="uid://bineearsmv4jn" path="res://resources/UI/button_normal.tres" id="8_tcnxy"]
-[ext_resource type="Texture2D" uid="uid://bah5mgdk2afgv" path="res://assets/UI/Button_basic.png" id="12_2d00k"]
 [ext_resource type="Texture2D" uid="uid://c2c78u8oae482" path="res://assets/UI/Icon_food_Fish.png" id="12_4pqpy"]
+[ext_resource type="Texture2D" uid="uid://ld186ppnu3vl" path="res://assets/UI/Paper.png" id="12_y84q6"]
+[ext_resource type="Texture2D" uid="uid://dygh6yhs031i2" path="res://assets/UI/Arrow_right.png" id="13_gxhal"]
 [ext_resource type="Texture2D" uid="uid://dty6nuc1o4o1a" path="res://assets/UI/Icon_food_Mandragora.png" id="13_tjw4f"]
-[ext_resource type="Texture2D" uid="uid://mt2sf5jv6ndb" path="res://assets/UI/rightarrow.png" id="13_xfw0p"]
 [ext_resource type="Texture2D" uid="uid://b8ptl3216m772" path="res://assets/UI/Icon_food_eyepple.png" id="14_jtaoi"]
-[ext_resource type="Texture2D" uid="uid://bixw3yvgfp3bm" path="res://assets/UI/leftarrow.png" id="14_lppql"]
+[ext_resource type="Texture2D" uid="uid://bq687k7lgfpth" path="res://assets/UI/Arrow_left.png" id="14_ojko6"]
+[ext_resource type="Texture2D" uid="uid://exxo1i3rh8mf" path="res://assets/UI/hints_sheet.png" id="15_bsu4l"]
 [ext_resource type="Script" path="res://scripts/menus/tip.gd" id="15_jpu6q"]
 [ext_resource type="Texture2D" uid="uid://pec30085yaq0" path="res://assets/UI/Icon_food_dragonmeat.png" id="15_wpes3"]
 [ext_resource type="Texture2D" uid="uid://jnuaunskhvi" path="res://assets/UI/Icon_food_firecarrot.png" id="16_gmrhm"]
+[ext_resource type="Texture2D" uid="uid://drkhwygs1na65" path="res://assets/UI/Icon_food_Berries.png" id="21_sl6df"]
 
 [sub_resource type="Animation" id="Animation_7mdp0"]
 resource_name = "AppearDisappear"
@@ -157,6 +158,8 @@ texture = ExtResource("8_2yaim")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vp4bj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6xnv"]
+atlas = ExtResource("15_bsu4l")
+region = Rect2(0, 0, 1024, 256)
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_i3k5c")
@@ -175,8 +178,6 @@ position = Vector2(0, -2)
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_4v8we")
 
-[node name="PauseMenu" parent="." instance=ExtResource("2_5i0uf")]
-
 [node name="UI" type="CanvasLayer" parent="."]
 process_mode = 3
 layer = 2
@@ -189,9 +190,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -400.0
-offset_top = -260.0
+offset_top = -200.0
 offset_right = 400.0
-offset_bottom = 140.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -289,7 +290,8 @@ custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture = ExtResource("12_2d00k")
+texture = ExtResource("12_y84q6")
+expand_mode = 5
 
 [node name="RightBtn" type="Button" parent="UI/VBoxContainer/Notepad"]
 layout_mode = 1
@@ -299,8 +301,8 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -35.0
-offset_top = -17.0
-offset_bottom = 18.0
+offset_top = 1.125
+offset_bottom = 36.125
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4lxsf")
@@ -314,7 +316,7 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_27j3s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_lun8f")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rkgjm")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_n7g2l")
-icon = ExtResource("13_xfw0p")
+icon = ExtResource("13_gxhal")
 expand_icon = true
 
 [node name="LeftBtn" type="Button" parent="UI/VBoxContainer/Notepad"]
@@ -322,9 +324,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -17.5
+offset_top = 1.125
 offset_right = 35.0
-offset_bottom = 17.5
+offset_bottom = 36.125
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4siey")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tm30j")
@@ -337,27 +339,29 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_pw5ox")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_oclmk")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fhb5r")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_vp4bj")
-icon = ExtResource("14_lppql")
+icon = ExtResource("14_ojko6")
 expand_icon = true
 
 [node name="Tip" type="TextureRect" parent="UI/VBoxContainer/Notepad"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -139.0
+offset_top = -4.875
+offset_right = 139.0
+offset_bottom = 47.125
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_u6xnv")
+expand_mode = 3
 script = ExtResource("15_jpu6q")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = -1
@@ -385,6 +389,11 @@ expand_mode = 2
 [node name="5Fish" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 texture = ExtResource("12_4pqpy")
+expand_mode = 2
+
+[node name="6Berries" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("21_sl6df")
 expand_mode = 2
 
 [connection signal="timeout" from="UI/StartTimer" to="." method="_on_start_timer_timeout"]
