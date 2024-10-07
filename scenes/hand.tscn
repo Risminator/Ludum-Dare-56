@@ -15,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(600, -303, 218, -105, 186, -77, 112, -49, -48, -33, -154, -5, -288, 83, -238, 115, -116, 53, -60, 81, 114, 89, 218, -1, 448, -51, 600, -107)]
+"values": [PackedVector2Array(745, -456, 404, -249, 123, -92, 46, -58, -124, -42, -225, -17, -357, 78, -312, 107, -186, 43, -153, 81, 39, 80, 159, 9, 465, -82, 806, -219, 997, -458)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -66,7 +66,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-229.2, -5.29999, -23, 5, -20, 60, -105, 71, -224.2, 58.7, -238.2, 22.7)]
+"values": [PackedVector2Array(-221, -95, -164, -99, -4, -91, -3, -28, -134, -24, -209, -38)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -78,7 +78,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(686, -361, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 789, -171, 976, -363)]
+"values": [PackedVector2Array(697, -460, 550, -370, 209, -175, 46, -156, -49, -129, -105, -93, -168, -99, -128, -36, -162, 18, -142, 41, -89, 52, -63, 57, -10, 60, 97, 20, 209, -62, 808, -269, 992, -459)]
 }
 
 [sub_resource type="Animation" id="Animation_qc43e"]
@@ -105,7 +105,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-313, 45, -335, -3, -166, -3, -23, -3, -23, -3, -20, 60, -99, 77)]
+"values": [PackedVector2Array(-318, -98, -164, -99, -4, -91, -3, -28, -134, -24, -292, -49)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -117,7 +117,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(690, -363, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 778, -167, 970, -365)]
+"values": [PackedVector2Array(697, -460, 550, -370, 209, -175, 46, -156, -49, -129, -105, -93, -168, -99, -128, -36, -162, 18, -142, 41, -89, 52, -63, 57, -10, 60, 97, 20, 209, -62, 808, -269, 992, -459)]
 }
 
 [sub_resource type="Animation" id="Animation_wq82b"]
@@ -144,7 +144,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)]
+"values": [PackedVector2Array(-463, -91, -304, -98, -164, -99, -4, -91, -3, -28, -134, -24, -460, -72)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -156,7 +156,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(667, -360, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 826, -198, 972, -368)]
+"values": [PackedVector2Array(697, -460, 550, -370, 209, -175, 46, -156, -49, -129, -105, -93, -168, -99, -128, -36, -162, 18, -142, 41, -89, 52, -63, 57, -10, 60, 97, 20, 209, -62, 808, -269, 992, -459)]
 }
 
 [sub_resource type="Animation" id="Animation_aqe6n"]
@@ -171,7 +171,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(810, -446, 218, -105, 186, -77, 112, -49, -48, -33, -154, -5, -288, 83, -238, 115, -116, 53, -74, 83, 113, 84, 218, -1, 448, -51, 884, -233, 1052, -450)]
+"values": [PackedVector2Array(745, -456, 404, -249, 123, -92, 46, -58, -124, -42, -225, -17, -357, 78, -312, 107, -186, 43, -153, 81, 39, 80, 159, 9, 465, -82, 806, -219, 997, -458)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -222,7 +222,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(764, -450, 623, -318, 218, -113, 186, -77, 119, -67, -38, -132, -183, -119, -240, -62, -215, 9, -101, 22, -17, 53, 101, 46, 217, 19, 448, -51, 799, -176, 1025, -455)]
+"values": [PackedVector2Array(511, -282, 234, -132, 163, -87, 59, -76, -73, -139, -212, -124, -260, -75, -215, 9, -110, 20, -52, 55, 122, 16, 217, 19, 493, -76, 790, -190, 1032, -455, 762, -455)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -234,7 +234,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-331, -40, -251, -74, -143, -65, -156, 2, -137, 26, -143, 52, -191, 58, -241, 73)]
+"values": [PackedVector2Array(-371, -33, -348, -50, -262, -77, -143, -65, -156, 2, -206, 56, -242, 68, -277, 56, -306, 21, -336, 7)]
 }
 
 [sub_resource type="Animation" id="Animation_81u2j"]
@@ -261,7 +261,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(756, -452, 637, -334, 224, -109, 186, -77, 119, -67, -32, -144, -183, -119, -240, -62, -215, 9, -101, 22, -17, 53, 101, 46, 217, 19, 448, -51, 800, -178, 1038, -455)]
+"values": [PackedVector2Array(511, -282, 234, -132, 163, -87, 59, -76, -73, -139, -212, -124, -260, -75, -215, 9, -110, 20, -52, 55, 122, 16, 217, 19, 493, -76, 790, -190, 1032, -455, 762, -455)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -273,7 +273,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-372, -6, -326, -35, -251, -74, -143, -65, -156, 2, -219, 86, -240, 118, -294, 86, -330, 49)]
+"values": [PackedVector2Array(-418, -5, -348, -50, -262, -77, -143, -65, -156, 2, -206, 56, -242, 68, -279, 114, -328, 83, -361, 34)]
 }
 
 [sub_resource type="Animation" id="Animation_e16hc"]
@@ -300,7 +300,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(600, -303, 224, -109, 186, -77, 119, -67, -32, -144, -183, -119, -240, -62, -215, 9, -101, 22, -17, 53, 101, 46, 217, 19, 448, -51, 600, -107)]
+"values": [PackedVector2Array(511, -282, 234, -132, 163, -87, 59, -76, -73, -139, -212, -124, -260, -75, -215, 9, -110, 20, -52, 55, 122, 16, 217, 19, 493, -76, 790, -190, 1032, -455, 762, -455)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -312,7 +312,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-410, 42, -326, -35, -251, -74, -143, -65, -156, 2, -219, 86, -289, 184, -365, 190, -422, 110)]
+"values": [PackedVector2Array(-442, 21, -348, -50, -262, -77, -143, -65, -156, 2, -206, 56, -242, 68, -307, 159, -401, 187, -448, 109)]
 }
 
 [sub_resource type="Animation" id="Animation_7yqrr"]
@@ -327,7 +327,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [4]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -339,7 +339,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(598, -310, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 605, -108)]
+"values": [PackedVector2Array(697, -460, 550, -370, 209, -175, 46, -156, -49, -129, -105, -93, -168, -99, -128, -36, -162, 18, -142, 41, -89, 52, -63, 57, -10, 60, 97, 20, 209, -62, 808, -269, 992, -459)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -351,7 +351,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)]
+"values": [PackedVector2Array(-463, -91, -304, -98, -164, -99, -4, -91, -3, -28, -134, -24, -460, -72)]
 }
 
 [sub_resource type="Animation" id="Animation_wpqsn"]
@@ -417,19 +417,17 @@ texture = ExtResource("2_3atit")
 offset = Vector2(300, -60)
 hframes = 4
 vframes = 6
-frame = 8
+frame = 4
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 8
 
 [node name="FoodCollision" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(-42, -2)
-polygon = PackedVector2Array(-484, 6, -451, 0, -330, -3, -166, -3, -23, 5, -20, 60, -99, 77, -481, 23)
+polygon = PackedVector2Array(-463, -91, -304, -98, -164, -99, -4, -91, -3, -28, -134, -24, -460, -72)
 
 [node name="HandCollision" type="CollisionPolygon2D" parent="."]
-position = Vector2(-28, -5)
-polygon = PackedVector2Array(598, -310, 255, -111, 164, -68, -36, -29, -83, -29, -83, -29, -113, 1, -181, -1, -173, 19, -136, 34, -141, 59, -179, 119, -160, 135, -131, 128, -117, 144, -25, 151, 86, 108, 191, 36, 605, -108)
+polygon = PackedVector2Array(697, -460, 550, -370, 209, -175, 46, -156, -49, -129, -105, -93, -168, -99, -128, -36, -162, 18, -142, 41, -89, 52, -63, 57, -10, 60, 97, 20, 209, -62, 808, -269, 992, -459)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
