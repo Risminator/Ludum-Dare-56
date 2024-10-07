@@ -60,7 +60,7 @@ Vector2i(-1, 8): {
 },
 Vector2i(-1, 9): {
 "fade_beats": 2,
-"fade_mode": 3,
+"fade_mode": 0,
 "from_time": 2,
 "to_time": 0
 },
