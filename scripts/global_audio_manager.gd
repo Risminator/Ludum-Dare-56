@@ -3,8 +3,8 @@ extends AudioStreamPlayer2D
 @onready var st = stream as AudioStreamInteractive
 
 enum LOCATION_MUSIC_IDS {
-	CUTSCENE = 0,
-	CUTSCENE_VAR = 1,
+	CUTSCENE = 9,
+	CUTSCENE_VAR = 9,
 	MAP = 0,
 	MAP_VAR = 1,
 	MOUNTAINS = 2,
