@@ -13,7 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://dqkyhr4mnllqy" path="res://assets/sounds/music/all/all_base.ogg" id="9_c50gb"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_tqtam"]
-initial_clip = 9
 clip_count = 10
 clip_0/name = &"Menu Melody"
 clip_0/stream = ExtResource("1_3bvhx")
