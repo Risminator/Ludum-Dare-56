@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*res://scripts/autoloads/global.gd"
 Events="*res://scripts/autoloads/events.gd"
 SceneChanger="*res://scenes/scene_changer.tscn"
+GlobalAudioManager="*res://scenes/audio/global_audio_manager.tscn"
 
 [display]
 

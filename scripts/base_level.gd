@@ -4,7 +4,6 @@ extends Node2D
 @onready var start_label: Label = %StartLabel
 @onready var hand: CharacterBody2D = %Hand
 @onready var start_animation: AnimationPlayer = %StartAnimation
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var start_counter: int = 3
 
@@ -13,7 +12,6 @@ func _ready() -> void:
 	start_label.text = str(start_counter)
 	get_tree().paused = true
 	Events.transition_complete.connect(_on_transition_complete)
-	audio_stream_player_2d.play()
 	Events.game_lose.connect(_on_can_restart)
 	Events.game_start.connect(_on_can_return_to_map)
 	Events.satisfied_animal.connect(_on_can_restart)
