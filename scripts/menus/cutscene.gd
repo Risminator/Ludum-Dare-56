@@ -1,4 +1,4 @@
-extends Node
+extends Control
 class_name Cutscene
 
 #@onready var cutscene_frame: Sprite2D = $Container/Frame
