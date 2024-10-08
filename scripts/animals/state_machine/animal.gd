@@ -20,6 +20,8 @@ extends AnimatableBody2D
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states,
 	# that way they can move and react accordingly
+	gpu_particles_2d.process_material = Global.particles
+	angry_gpu_particles_2d.process_material = Global.particles
 	state_machine.init(self)
 
 func _unhandled_input(event: InputEvent) -> void:

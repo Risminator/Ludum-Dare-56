@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://xbu57lkb77xa"]
+[gd_scene load_steps=21 format=3 uid="uid://xbu57lkb77xa"]
 
 [ext_resource type="Script" path="res://scripts/animals/state_machine/animal.gd" id="1_1sxch"]
 [ext_resource type="Texture2D" uid="uid://r3xl0phwtuud" path="res://assets/creatures/rabbit_sheet.png" id="2_j17p5"]
@@ -350,13 +350,6 @@ _data = {
 "satisfied": SubResource("Animation_w67g4")
 }
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3lxpd"]
-particle_flag_disable_z = true
-direction = Vector3(0, -1, 0)
-initial_velocity_min = 203.12
-initial_velocity_max = 203.12
-gravity = Vector3(0, 98, 0)
-
 [node name="Animal" type="AnimatableBody2D"]
 collision_layer = 4
 collision_mask = 3
@@ -447,7 +440,6 @@ z_index = 2
 position = Vector2(68, -67)
 emitting = false
 amount = 2
-process_material = SubResource("ParticleProcessMaterial_3lxpd")
 texture = ExtResource("10_cuvde")
 
 [node name="AngryGPUParticles2D" type="GPUParticles2D" parent="."]
@@ -455,7 +447,6 @@ z_index = 2
 position = Vector2(70, -67)
 emitting = false
 amount = 16
-process_material = SubResource("ParticleProcessMaterial_3lxpd")
 texture = ExtResource("11_s4pgr")
 one_shot = true
 

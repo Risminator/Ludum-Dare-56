@@ -1,5 +1,7 @@
 extends Node
 
+var particles: Resource
+
 enum GAME_SCENES {
 	MAIN_MENU,
 	START_CUTSCENE,
@@ -57,6 +59,9 @@ var visited_monsters_count: int = 0
 
 var SoundEffectsVolume = 0
 var MusicVolume = 0
+
+func _ready():
+	particles = preload("res://resources/hearts.tres")
 
 #func set_scene(scene_name: String):
 	#get_tree().change_scene_to_file("res://scenes/" + scene_name + ".tscn")

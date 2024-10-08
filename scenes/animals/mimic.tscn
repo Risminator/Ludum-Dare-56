@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://xxug38yri1yi"]
+[gd_scene load_steps=18 format=3 uid="uid://xxug38yri1yi"]
 
 [ext_resource type="PackedScene" uid="uid://xbu57lkb77xa" path="res://scenes/animals/animal.tscn" id="1_0gq5c"]
 [ext_resource type="Script" path="res://scripts/animals/mimic.gd" id="2_k21xf"]
@@ -343,7 +343,62 @@ _data = {
 "satisfied": SubResource("Animation_w67g4")
 }
 
+[sub_resource type="Animation" id="Animation_783j4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-450, 90)]
+}
+
+[sub_resource type="Animation" id="Animation_weqxy"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-450, 90)]
+}
+
+[sub_resource type="Animation" id="Animation_j1vk2"]
+resource_name = "jumping"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.566667, 1.06667, 1.4, 2, 2.63333),
+"transitions": PackedFloat32Array(1, 2.54912, 3.48221, 1, 2.54912, 1),
+"update": 0,
+"values": [Vector2(-450, 90), Vector2(-390, -100), Vector2(-330, 90), Vector2(-330, 90), Vector2(-390, -100), Vector2(-450, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cpv7i"]
+_data = {
+"RESET": SubResource("Animation_783j4"),
+"idle": SubResource("Animation_weqxy"),
+"jumping": SubResource("Animation_j1vk2")
+}
+
 [node name="Mimic" instance=ExtResource("1_0gq5c")]
+position = Vector2(-450, 90)
 script = ExtResource("2_k21xf")
 
 [node name="Sprite2D" parent="." index="0"]
@@ -391,3 +446,9 @@ position = Vector2(-27, -202)
 
 [node name="AngryGPUParticles2D" parent="." index="11"]
 position = Vector2(-23, -177)
+
+[node name="MoveAnimation" type="AnimationPlayer" parent="." index="12"]
+libraries = {
+"": SubResource("AnimationLibrary_cpv7i")
+}
+autoplay = "jumping"

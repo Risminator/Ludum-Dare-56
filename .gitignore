@@ -4,3 +4,4 @@
 /_debug/
 .DS_Store
 /addons/godot-git-plugin/
+/build/
