@@ -425,7 +425,7 @@ polygon = PackedVector2Array(1, -91, 79, -89, 130, -80, 153, -18, 150, 28, 109, 
 
 [node name="FeedCollider2" type="Area2D" parent="."]
 collision_layer = 8
-collision_mask = 2
+collision_mask = 3
 
 [node name="FeedPolygon2" type="CollisionPolygon2D" parent="FeedCollider2"]
 polygon = PackedVector2Array(212, -55, 63, -21, 28, 72, 173, 106, 246, 51, 253, -19)
