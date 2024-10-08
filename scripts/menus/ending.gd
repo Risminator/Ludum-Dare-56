@@ -15,6 +15,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("lmb") or Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("ui_right"):
 		if frame == framesN - 1:
+			Global.visited_monsters_count = 0
 			SceneChanger.change_to(Global.GAME_SCENES.MAIN_MENU)
 		else:
 			animation_player.play("fade_transition_forwards")
