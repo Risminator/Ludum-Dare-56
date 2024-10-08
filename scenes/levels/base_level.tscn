@@ -262,7 +262,7 @@ text = " Restart "
 
 [node name="ReturnToMapBtn" type="Button" parent="UI/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_icons/icon = SubResource("ImageTexture_2ty43")
@@ -285,7 +285,7 @@ theme_override_constants/separation = -1
 metadata/_edit_use_anchors_ = true
 
 [node name="Notepad" type="TextureRect" parent="UI/VBoxContainer"]
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -299,10 +299,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.0
-offset_top = -4.875
-offset_right = 139.0
-offset_bottom = 47.125
+offset_left = -150.0
+offset_top = -3.09375
+offset_right = 151.0
+offset_bottom = 52.9063
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_u6xnv")
@@ -316,9 +316,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = 1.125
-offset_bottom = 36.125
+offset_left = -64.0
+offset_top = -1.09375
+offset_bottom = 62.9063
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4lxsf")
@@ -340,9 +340,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = 1.125
-offset_right = 35.0
-offset_bottom = 36.125
+offset_top = -1.09375
+offset_right = 64.0
+offset_bottom = 62.9063
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4siey")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tm30j")
@@ -359,42 +359,36 @@ icon = ExtResource("14_ojko6")
 expand_icon = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer"]
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 94)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 0
 
 [node name="Button" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 food = 1
 
 [node name="Button2" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 icon = ExtResource("15_wpes3")
 food = 2
 
 [node name="Button3" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 icon = ExtResource("14_jtaoi")
 food = 3
 
 [node name="Button4" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 icon = ExtResource("13_tjw4f")
 food = 4
 
 [node name="Button5" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 icon = ExtResource("12_4pqpy")
 food = 5
 
 [node name="Button6" parent="UI/VBoxContainer/HBoxContainer2" instance=ExtResource("16_e8f4t")]
-custom_minimum_size = Vector2(53, 72)
 layout_mode = 2
 icon = ExtResource("21_sl6df")
 food = 6
