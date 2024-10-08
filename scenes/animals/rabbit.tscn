@@ -60,8 +60,5 @@ animation_name = "rabbit_anims/flee"
 [node name="TouchPolygon" parent="TouchCollider" index="0"]
 polygon = PackedVector2Array(16, -84, 71, -108, 141, -88, 183, -42, 191, 12, 165, 55, 172, 117, 161, 203, 130, 244, 151, 286, 189, 296, 174, 320, 77, 326, 40, 278, -3, 296, 34, 310, -3, 328, -101, 317, -143, 282, -192, 244, -232, 221, -234, 186, -196, 165, -240, 92, -236, 41, -210, 39, -138, 43, -96, 59, 3, 32, -6, -5, -89, 8, -160, -27, -149, -63, -118, -61, -19, -63)
 
-[node name="FeedCollider2" parent="." index="8"]
-collision_mask = 3
-
 [node name="FeedPolygon2" parent="FeedCollider2" index="0"]
 position = Vector2(-10, -3)

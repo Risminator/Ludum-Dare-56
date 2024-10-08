@@ -13,7 +13,3 @@ texture = ExtResource("2_xx0bs")
 
 [node name="Hand" parent="Playerground" index="1" node_paths=PackedStringArray("animal")]
 animal = NodePath("../Mimic")
-
-[node name="LabelContainer" parent="UI" index="0"]
-offset_top = -260.0
-offset_bottom = 140.0
