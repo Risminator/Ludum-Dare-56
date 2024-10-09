@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c43jfwuurug72"
-path="res://.godot/imported/Mimimimic.png-9cede6b05aa6f9456a64d13a934184d0.ctex"
+uid="uid://wxc0uyuw06eu"
+path="res://.godot/imported/Angry.png-a925bc9aa141d60e9ff96f7f3d9091c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/Mimimimic.png"
-dest_files=["res://.godot/imported/Mimimimic.png-9cede6b05aa6f9456a64d13a934184d0.ctex"]
+source_file="res://assets/UI/Angry.png"
+dest_files=["res://.godot/imported/Angry.png-a925bc9aa141d60e9ff96f7f3d9091c0.ctex"]
 
 [params]
 
