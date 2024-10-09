@@ -92,7 +92,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			animation_player.play("{food} {health} hp".format({"food":food, "health":hp}))
 			if hp <= 0:
 				Events.satisfied_animal.emit()
-			print($Sprite2D.frame)
 		else:
 			animal.modulate = Color.DARK_OLIVE_GREEN
 			animal.angry_gpu_particles_2d.emitting = true
@@ -116,4 +115,3 @@ func is_food_correct() -> bool:
 func _on_satisfied() -> void:
 	min_x = -300
 	is_animal_satisfied = true
-	print("Satisfied!")

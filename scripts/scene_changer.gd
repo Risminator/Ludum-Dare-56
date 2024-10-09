@@ -6,7 +6,8 @@ var current_scene: Global.GAME_SCENES
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func change_to(new_scene: Global.GAME_SCENES):
-	print("change_to ", new_scene)
+	if OS.is_debug_build():
+		print("change_to ", new_scene)
 	current_scene = new_scene
 	match new_scene:
 		Global.GAME_SCENES.MAIN_MENU:
